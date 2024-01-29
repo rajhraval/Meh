@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF54C62B2B66743C00CA8F74 /* ActivityEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* ActivityEndpoint.swift */; };
+		CF54C62C2B66743C00CA8F74 /* ActivityEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* ActivityEndpoint.swift */; };
+		CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62D2B668EE000CA8F74 /* ActivityService.swift */; };
+		CF54C62F2B668EE000CA8F74 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62D2B668EE000CA8F74 /* ActivityService.swift */; };
+		CF54C6312B668F0200CA8F74 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6302B668F0200CA8F74 /* APIError.swift */; };
+		CF54C6322B668F0200CA8F74 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6302B668F0200CA8F74 /* APIError.swift */; };
+		CF54C6352B668F3100CA8F74 /* HTTPRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6342B668F3100CA8F74 /* HTTPRequestMethod.swift */; };
+		CF54C6362B668F3100CA8F74 /* HTTPRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6342B668F3100CA8F74 /* HTTPRequestMethod.swift */; };
+		CF54C6382B66919000CA8F74 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6372B66919000CA8F74 /* Activity.swift */; };
+		CF54C6392B66919000CA8F74 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6372B66919000CA8F74 /* Activity.swift */; };
+		CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */; };
+		CF5DAC5A2B66AF8F00F90A25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */; };
 		CFB8A8E12B66238000E617C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E02B66238000E617C5 /* AppDelegate.swift */; };
 		CFB8A8E32B66238000E617C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E22B66238000E617C5 /* SceneDelegate.swift */; };
-		CFB8A8E52B66238000E617C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E42B66238000E617C5 /* ViewController.swift */; };
+		CFB8A8E52B66238000E617C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E42B66238000E617C5 /* HomeViewController.swift */; };
 		CFB8A8ED2B66238100E617C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB8A8EB2B66238100E617C5 /* LaunchScreen.storyboard */; };
 		CFB8A8F52B66263500E617C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8F42B66263500E617C5 /* Constants.swift */; };
 		CFB8A90E2B66269E00E617C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E02B66238000E617C5 /* AppDelegate.swift */; };
 		CFB8A90F2B66269E00E617C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E22B66238000E617C5 /* SceneDelegate.swift */; };
-		CFB8A9102B66269E00E617C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E42B66238000E617C5 /* ViewController.swift */; };
+		CFB8A9102B66269E00E617C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E42B66238000E617C5 /* HomeViewController.swift */; };
 		CFB8A9132B66269E00E617C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8F42B66263500E617C5 /* Constants.swift */; };
 		CFB8A9162B6626C000E617C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB8A8E92B66238100E617C5 /* Assets.xcassets */; };
 		CFB8A9172B6626C600E617C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB8A8E92B66238100E617C5 /* Assets.xcassets */; };
@@ -32,10 +44,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF54C62A2B66743C00CA8F74 /* ActivityEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEndpoint.swift; sourceTree = "<group>"; };
+		CF54C62D2B668EE000CA8F74 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
+		CF54C6302B668F0200CA8F74 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		CF54C6342B668F3100CA8F74 /* HTTPRequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestMethod.swift; sourceTree = "<group>"; };
+		CF54C6372B66919000CA8F74 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CFB8A8DD2B66238000E617C5 /* Meh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB8A8E02B66238000E617C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB8A8E22B66238000E617C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CFB8A8E42B66238000E617C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFB8A8E42B66238000E617C5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CFB8A8E92B66238100E617C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFB8A8EC2B66238100E617C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFB8A8EE2B66238100E617C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +87,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF54C6332B668F0D00CA8F74 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CF54C62A2B66743C00CA8F74 /* ActivityEndpoint.swift */,
+				CF54C62D2B668EE000CA8F74 /* ActivityService.swift */,
+				CF54C6302B668F0200CA8F74 /* APIError.swift */,
+				CF54C6342B668F3100CA8F74 /* HTTPRequestMethod.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CF5DAC5B2B66AFA500F90A25 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8A8E42B66238000E617C5 /* HomeViewController.swift */,
+				CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		CFB8A8D42B66238000E617C5 = {
 			isa = PBXGroup;
 			children = (
@@ -92,11 +130,12 @@
 				CFB8A91A2B66295000E617C5 /* Config */,
 				CFB8A8E02B66238000E617C5 /* AppDelegate.swift */,
 				CFB8A8E22B66238000E617C5 /* SceneDelegate.swift */,
-				CFB8A8E42B66238000E617C5 /* ViewController.swift */,
+				CF5DAC5B2B66AFA500F90A25 /* Home */,
 				CFB8A9462B6640DE00E617C5 /* Model */,
 				CFB8A8E92B66238100E617C5 /* Assets.xcassets */,
 				CFB8A8EB2B66238100E617C5 /* LaunchScreen.storyboard */,
 				CFB8A91E2B662A3F00E617C5 /* Helpers */,
+				CF54C6332B668F0D00CA8F74 /* Networking */,
 			);
 			path = Meh;
 			sourceTree = "<group>";
@@ -128,6 +167,7 @@
 			children = (
 				CFB8A9422B6640D000E617C5 /* MehModel.xcdatamodeld */,
 				CFB8A9472B6640F900E617C5 /* CoreDataStack.swift */,
+				CF54C6372B66919000CA8F74 /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,13 +274,19 @@
 			files = (
 				CFB8A9482B6640F900E617C5 /* CoreDataStack.swift in Sources */,
 				CFB8A9442B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */,
-				CFB8A8E52B66238000E617C5 /* ViewController.swift in Sources */,
+				CF54C6382B66919000CA8F74 /* Activity.swift in Sources */,
+				CFB8A8E52B66238000E617C5 /* HomeViewController.swift in Sources */,
 				CFB8A94B2B66420F00E617C5 /* URL+.swift in Sources */,
+				CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */,
+				CF54C6352B668F3100CA8F74 /* HTTPRequestMethod.swift in Sources */,
+				CF54C6312B668F0200CA8F74 /* APIError.swift in Sources */,
 				CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */,
 				CFB8A8E12B66238000E617C5 /* AppDelegate.swift in Sources */,
 				CFB8A91C2B662A0900E617C5 /* UserDefaults+.swift in Sources */,
 				CFB8A8E32B66238000E617C5 /* SceneDelegate.swift in Sources */,
 				CFB8A8F52B66263500E617C5 /* Constants.swift in Sources */,
+				CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */,
+				CF54C62B2B66743C00CA8F74 /* ActivityEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,13 +296,19 @@
 			files = (
 				CFB8A9492B6640F900E617C5 /* CoreDataStack.swift in Sources */,
 				CFB8A9452B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */,
-				CFB8A9102B66269E00E617C5 /* ViewController.swift in Sources */,
+				CF54C6392B66919000CA8F74 /* Activity.swift in Sources */,
+				CFB8A9102B66269E00E617C5 /* HomeViewController.swift in Sources */,
 				CFB8A94C2B66420F00E617C5 /* URL+.swift in Sources */,
+				CF54C62F2B668EE000CA8F74 /* ActivityService.swift in Sources */,
+				CF54C6362B668F3100CA8F74 /* HTTPRequestMethod.swift in Sources */,
+				CF54C6322B668F0200CA8F74 /* APIError.swift in Sources */,
 				CFB8A94F2B6643AF00E617C5 /* Logger.swift in Sources */,
 				CFB8A90E2B66269E00E617C5 /* AppDelegate.swift in Sources */,
 				CFB8A91D2B662A0900E617C5 /* UserDefaults+.swift in Sources */,
 				CFB8A90F2B66269E00E617C5 /* SceneDelegate.swift in Sources */,
 				CFB8A9132B66269E00E617C5 /* Constants.swift in Sources */,
+				CF5DAC5A2B66AF8F00F90A25 /* HomeViewModel.swift in Sources */,
+				CF54C62C2B66743C00CA8F74 /* ActivityEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
