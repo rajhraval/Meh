@@ -1,5 +1,5 @@
 //
-//  ActivityEndpoint.swift
+//  APIEndpoint.swift
 //  Meh
 //
 //  Created by Raj Raval on 28/01/24.
@@ -16,7 +16,15 @@ protocol Endpoint {
     var queryItems: [URLQueryItem]? { get }
 }
 
-enum ActivityEndpoint: Endpoint {
+enum HTTPRequestMethod: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case patch = "PATCH"
+    case delete = "DELETE"
+}
+
+enum APIEndpoint: Endpoint {
     case activity(
         type: String?,
         participants: Int?,

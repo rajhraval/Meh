@@ -38,7 +38,7 @@ final class HomeViewModel: ObservableObject {
     ) {
         Task {
             do {
-                let endpoint = ActivityEndpoint.activity(
+                self.activity = try await activityService.fetchActivity(
                     type: type,
                     participants: participants,
                     price: price,
@@ -47,8 +47,7 @@ final class HomeViewModel: ObservableObject {
                     accessibility: accessibility,
                     minAccessibility: minAccessibility,
                     maxAccessibility: maxAccessibility
-                )
-                self.activity = try await activityService.request(endpoint) as Activity
+                ) as Activity
                 loadingState = .idle
             } catch let error {
                 loadingState = .error
