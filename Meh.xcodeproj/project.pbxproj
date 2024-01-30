@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AC62B68EF7200F4AFE7 /* API.swift */; };
 		CF197AC82B68EF7200F4AFE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AC62B68EF7200F4AFE7 /* API.swift */; };
+		CF197AD32B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD12B68F61400F4AFE7 /* MehItem+CoreDataClass.swift */; };
+		CF197AD42B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD12B68F61400F4AFE7 /* MehItem+CoreDataClass.swift */; };
+		CF197AD52B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD22B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift */; };
+		CF197AD62B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD22B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift */; };
+		CF197AE72B690B1B00F4AFE7 /* LayoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */; };
+		CF197AE82B690B1B00F4AFE7 /* LayoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */; };
+		CF197AEB2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AEA2B690B6D00F4AFE7 /* UICollectionView+.swift */; };
+		CF197AEC2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AEA2B690B6D00F4AFE7 /* UICollectionView+.swift */; };
+		CF197AF12B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AF02B690D4D00F4AFE7 /* FavoriteListCell.swift */; };
+		CF197AF22B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AF02B690D4D00F4AFE7 /* FavoriteListCell.swift */; };
+		CF197AF42B692B8500F4AFE7 /* Notification+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AF32B692B8500F4AFE7 /* Notification+.swift */; };
+		CF197AF52B692B8500F4AFE7 /* Notification+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AF32B692B8500F4AFE7 /* Notification+.swift */; };
 		CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */; };
 		CF54C62C2B66743C00CA8F74 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */; };
 		CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62D2B668EE000CA8F74 /* ActivityService.swift */; };
@@ -57,6 +69,12 @@
 
 /* Begin PBXFileReference section */
 		CF197AC62B68EF7200F4AFE7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CF197AD12B68F61400F4AFE7 /* MehItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MehItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CF197AD22B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MehItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutType.swift; sourceTree = "<group>"; };
+		CF197AEA2B690B6D00F4AFE7 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		CF197AF02B690D4D00F4AFE7 /* FavoriteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListCell.swift; sourceTree = "<group>"; };
+		CF197AF32B692B8500F4AFE7 /* Notification+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+.swift"; sourceTree = "<group>"; };
 		CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		CF54C62D2B668EE000CA8F74 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		CF54C6302B668F0200CA8F74 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -115,6 +133,23 @@
 			path = Implementations;
 			sourceTree = "<group>";
 		};
+		CF197AD72B68F62000F4AFE7 /* Meh */ = {
+			isa = PBXGroup;
+			children = (
+				CF197AD12B68F61400F4AFE7 /* MehItem+CoreDataClass.swift */,
+				CF197AD22B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift */,
+			);
+			path = Meh;
+			sourceTree = "<group>";
+		};
+		CF197AE92B690B4E00F4AFE7 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
 		CF54C6332B668F0D00CA8F74 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +173,7 @@
 			children = (
 				CF9DE1952B68046400CBE242 /* FavoriteViewController.swift */,
 				CF9DE1982B68047300CBE242 /* FavoriteViewModel.swift */,
+				CF197AF02B690D4D00F4AFE7 /* FavoriteListCell.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -200,6 +236,7 @@
 				CFB8A8EB2B66238100E617C5 /* LaunchScreen.storyboard */,
 				CFB8A91E2B662A3F00E617C5 /* Helpers */,
 				CF54C6332B668F0D00CA8F74 /* Networking */,
+				CF197AE92B690B4E00F4AFE7 /* UI Components */,
 			);
 			path = Meh;
 			sourceTree = "<group>";
@@ -222,6 +259,8 @@
 				CFB8A91B2B662A0900E617C5 /* UserDefaults+.swift */,
 				CFB8A94A2B66420F00E617C5 /* URL+.swift */,
 				CFB8A94D2B6643AF00E617C5 /* Logger.swift */,
+				CF197AEA2B690B6D00F4AFE7 /* UICollectionView+.swift */,
+				CF197AF32B692B8500F4AFE7 /* Notification+.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -229,6 +268,7 @@
 		CFB8A9462B6640DE00E617C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CF197AD72B68F62000F4AFE7 /* Meh */,
 				CFB8A9422B6640D000E617C5 /* MehModel.xcdatamodeld */,
 				CFB8A9472B6640F900E617C5 /* CoreDataStack.swift */,
 				CF54C6372B66919000CA8F74 /* Activity.swift */,
@@ -336,15 +376,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF197AE72B690B1B00F4AFE7 /* LayoutType.swift in Sources */,
 				CFB8A9482B6640F900E617C5 /* CoreDataStack.swift in Sources */,
 				CFB8A9442B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */,
 				CF54C6382B66919000CA8F74 /* Activity.swift in Sources */,
+				CF197AD52B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */,
 				CF9DE1A52B6806E100CBE242 /* SettingsViewController.swift in Sources */,
 				CF9DE19E2B68051000CBE242 /* TabBarController.swift in Sources */,
 				CFB8A8E52B66238000E617C5 /* HomeViewController.swift in Sources */,
 				CFB8A94B2B66420F00E617C5 /* URL+.swift in Sources */,
+				CF197AEB2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */,
 				CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */,
+				CF197AF42B692B8500F4AFE7 /* Notification+.swift in Sources */,
 				CF9DE1962B68046400CBE242 /* FavoriteViewController.swift in Sources */,
+				CF197AD32B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */,
 				CF54C6312B668F0200CA8F74 /* APIError.swift in Sources */,
 				CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */,
 				CFB8A8E12B66238000E617C5 /* AppDelegate.swift in Sources */,
@@ -357,6 +402,7 @@
 				CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */,
 				CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */,
 				CF9DE1A82B6806FF00CBE242 /* SettingsViewModel.swift in Sources */,
+				CF197AF12B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,15 +410,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF197AE82B690B1B00F4AFE7 /* LayoutType.swift in Sources */,
 				CFB8A9492B6640F900E617C5 /* CoreDataStack.swift in Sources */,
 				CFB8A9452B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */,
 				CF54C6392B66919000CA8F74 /* Activity.swift in Sources */,
+				CF197AD62B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */,
 				CF9DE1A62B6806E100CBE242 /* SettingsViewController.swift in Sources */,
 				CF9DE19F2B68051000CBE242 /* TabBarController.swift in Sources */,
 				CFB8A9102B66269E00E617C5 /* HomeViewController.swift in Sources */,
 				CFB8A94C2B66420F00E617C5 /* URL+.swift in Sources */,
+				CF197AEC2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */,
 				CF54C62F2B668EE000CA8F74 /* ActivityService.swift in Sources */,
+				CF197AF52B692B8500F4AFE7 /* Notification+.swift in Sources */,
 				CF9DE1972B68046400CBE242 /* FavoriteViewController.swift in Sources */,
+				CF197AD42B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */,
 				CF54C6322B668F0200CA8F74 /* APIError.swift in Sources */,
 				CFB8A94F2B6643AF00E617C5 /* Logger.swift in Sources */,
 				CFB8A90E2B66269E00E617C5 /* AppDelegate.swift in Sources */,
@@ -385,6 +436,7 @@
 				CF5DAC5A2B66AF8F00F90A25 /* HomeViewModel.swift in Sources */,
 				CF54C62C2B66743C00CA8F74 /* APIEndpoint.swift in Sources */,
 				CF9DE1A92B6806FF00CBE242 /* SettingsViewModel.swift in Sources */,
+				CF197AF22B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

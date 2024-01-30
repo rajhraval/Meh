@@ -13,7 +13,6 @@ final class HomeViewController: UIViewController {
     private var refreshButton: UIButton = {
         let refreshButton = UIButton(type: .system)
         refreshButton.translatesAutoresizingMaskIntoConstraints = false
-        refreshButton.backgroundColor = .systemBlue
         refreshButton.setImage(UIImage(systemName: "arrow.counterclockwise.circle.fill"), for: .normal)
         return refreshButton
     }()
@@ -21,7 +20,6 @@ final class HomeViewController: UIViewController {
     private var favoriteButton: UIButton = {
         let favoriteButton = UIButton(type: .system)
         favoriteButton.translatesAutoresizingMaskIntoConstraints = false
-        favoriteButton.backgroundColor = .systemPink
         favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         return favoriteButton
     }()
@@ -29,7 +27,6 @@ final class HomeViewController: UIViewController {
     private var shareButton: UIButton = {
         let shareButton = UIButton(type: .system)
         shareButton.translatesAutoresizingMaskIntoConstraints = false
-        shareButton.backgroundColor = .systemTeal
         shareButton.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         return shareButton
     }()
@@ -157,13 +154,14 @@ final class HomeViewController: UIViewController {
 
     @objc
     func favourite(_ sender: UIButton) {
-        
+        guard let activity = activity else { return }
+        viewModel.addActivity(activity)
     }
 
     @objc
     func share(_ sender: UIButton) {
 
     }
-
+    
 }
 

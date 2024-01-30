@@ -55,4 +55,17 @@ final class HomeViewModel: ObservableObject {
             }
         }
     }
+
+    func addActivity(_ activity: Activity) {
+        CoreDataStack.shared.addMehItem(
+            id: activity.id,
+            name: activity.name,
+            type: activity.type,
+            participants: Int(activity.participants),
+            price: activity.price,
+            accessibility: activity.accessibility,
+            link: activity.link
+        )
+        NotificationCenter.default.post(name: .addActivity, object: nil)
+    }
 }
