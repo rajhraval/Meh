@@ -8,12 +8,11 @@
 import Foundation
 
 protocol API {
-    associatedtype ResponseType
-    func request<ResponseType: Codable>(_ endpoint: Endpoint) async throws -> ResponseType
+    func request<T: Codable>(_ endpoint: Endpoint) async throws -> T
 }
 
 extension API {
-    func request<ResponseType: Codable>(_ endpoint: Endpoint) async throws -> ResponseType {
+    func request<T: Codable>(_ endpoint: Endpoint) async throws -> T {
         let url = endpoint.baseURL.appendingPathComponent(endpoint.path)
 
         var request = URLRequest(url: url)
@@ -31,7 +30,7 @@ extension API {
                 throw APIError.networkingError(error: NSError(domain: "HTTP Error", code: (response as? HTTPURLResponse)?.statusCode ?? 500, userInfo: nil))
             }
 
-            let decodedResponse = try JSONDecoder().decode(ResponseType.self, from: data)
+            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
             return decodedResponse
         } catch let error {
             throw APIError.decodingError(error: error)

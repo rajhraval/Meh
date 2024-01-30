@@ -9,8 +9,6 @@ import Foundation
 
 final class ActivityService: API {
 
-    typealias ResponseType = Activity
-
     func fetchActivity(
         type: String? = nil,
         participants: Int? = nil,
@@ -20,7 +18,7 @@ final class ActivityService: API {
         accessibility: Double? = nil,
         minAccessibility: Double? = nil,
         maxAccessibility: Double? = nil
-    ) async throws -> ResponseType {
+    ) async throws -> Activity {
         try await request(
             APIEndpoint.activity(
                 type: type,
