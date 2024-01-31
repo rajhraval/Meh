@@ -41,6 +41,8 @@
 		CF204FBC2B6A75F70084E90C /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FBA2B6A75F70084E90C /* FontHelper.swift */; };
 		CF204FBE2B6A7BE40084E90C /* MehButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FBD2B6A7BE40084E90C /* MehButton.swift */; };
 		CF204FBF2B6A7BE40084E90C /* MehButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FBD2B6A7BE40084E90C /* MehButton.swift */; };
+		CF204FC12B6AA0CB0084E90C /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC02B6AA0CB0084E90C /* Decorator.swift */; };
+		CF204FC22B6AA0CB0084E90C /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC02B6AA0CB0084E90C /* Decorator.swift */; };
 		CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */; };
 		CF54C62C2B66743C00CA8F74 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */; };
 		CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62D2B668EE000CA8F74 /* ActivityService.swift */; };
@@ -105,6 +107,7 @@
 		CF204FB72B6A75E00084E90C /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		CF204FBA2B6A75F70084E90C /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		CF204FBD2B6A7BE40084E90C /* MehButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehButton.swift; sourceTree = "<group>"; };
+		CF204FC02B6AA0CB0084E90C /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		CF54C62D2B668EE000CA8F74 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		CF54C6302B668F0200CA8F74 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -309,6 +312,7 @@
 				CF197AF32B692B8500F4AFE7 /* Notification+.swift */,
 				CF204FB72B6A75E00084E90C /* UIFont+.swift */,
 				CF204FBA2B6A75F70084E90C /* FontHelper.swift */,
+				CF204FC02B6AA0CB0084E90C /* Decorator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -455,6 +459,7 @@
 				CF9DE1962B68046400CBE242 /* FavoriteViewController.swift in Sources */,
 				CF197AD32B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */,
 				CF54C6312B668F0200CA8F74 /* APIError.swift in Sources */,
+				CF204FC12B6AA0CB0084E90C /* Decorator.swift in Sources */,
 				CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */,
 				CFB8A8E12B66238000E617C5 /* AppDelegate.swift in Sources */,
 				CF9DE1A12B6805DE00CBE242 /* TabItem.swift in Sources */,
@@ -492,6 +497,7 @@
 				CF9DE1972B68046400CBE242 /* FavoriteViewController.swift in Sources */,
 				CF197AD42B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */,
 				CF54C6322B668F0200CA8F74 /* APIError.swift in Sources */,
+				CF204FC22B6AA0CB0084E90C /* Decorator.swift in Sources */,
 				CFB8A94F2B6643AF00E617C5 /* Logger.swift in Sources */,
 				CFB8A90E2B66269E00E617C5 /* AppDelegate.swift in Sources */,
 				CF9DE1A22B6805DE00CBE242 /* TabItem.swift in Sources */,

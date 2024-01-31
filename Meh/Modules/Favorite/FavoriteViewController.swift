@@ -40,6 +40,7 @@ final class FavoriteViewController: UIViewController {
     }
 
     private func setup() {
+        title = "Favorites"
         view.backgroundColor = .white
         setupView()
         bind()

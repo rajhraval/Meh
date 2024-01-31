@@ -74,6 +74,7 @@ final class HomeViewController: UIViewController {
     }
 
     private func setup() {
+        title = "Feeling Meh?"
         view.backgroundColor = .systemBackground
         setupView()
         bind()
