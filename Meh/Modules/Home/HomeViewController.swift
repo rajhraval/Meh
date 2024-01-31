@@ -10,24 +10,25 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    private var refreshButton: UIButton = {
-        let refreshButton = UIButton(type: .system)
+    private var refreshButton: MehButton = {
+        let refreshButton = MehButton(style: .text)
         refreshButton.translatesAutoresizingMaskIntoConstraints = false
-        refreshButton.setImage(UIImage(systemName: "arrow.counterclockwise.circle.fill"), for: .normal)
+        refreshButton.title = "Meh"
         return refreshButton
     }()
 
-    private var favoriteButton: UIButton = {
-        let favoriteButton = UIButton(type: .system)
+    private var favoriteButton: MehButton = {
+        let favoriteButton = MehButton(style: .symbol)
         favoriteButton.translatesAutoresizingMaskIntoConstraints = false
-        favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        favoriteButton.backgroundColour = .systemPink
         return favoriteButton
     }()
 
-    private var shareButton: UIButton = {
-        let shareButton = UIButton(type: .system)
+    private var shareButton: MehButton = {
+        let shareButton = MehButton(style: .icon)
         shareButton.translatesAutoresizingMaskIntoConstraints = false
-        shareButton.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
+        shareButton.font = .h2
+        shareButton.foregroundColour = .systemRed
         return shareButton
     }()
 
@@ -125,13 +126,11 @@ final class HomeViewController: UIViewController {
     private func setupRefreshConstraints() {
         refreshButton.addTarget(self, action: #selector(refresh), for: .touchUpInside)
         buttonStackView.addArrangedSubview(refreshButton)
-        refreshButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
     }
 
     private func setupFavoriteConstraints() {
         favoriteButton.addTarget(self, action: #selector(favourite), for: .touchUpInside)
         buttonStackView.addArrangedSubview(favoriteButton)
-        favoriteButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
     }
 
     private func setupShareConstraints() {
