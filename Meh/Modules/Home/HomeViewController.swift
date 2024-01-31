@@ -34,6 +34,7 @@ final class HomeViewController: UIViewController {
     private var activityLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .h0
         return label
     }()
 
