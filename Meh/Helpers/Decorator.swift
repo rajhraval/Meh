@@ -38,6 +38,7 @@ final class Decorator {
         mehAppearance.backButtonAppearance = barButtonItemAppearance
 
         let appearance = UINavigationBar.appearance()
+        appearance.tintColor = .black
         appearance.prefersLargeTitles = true
         appearance.scrollEdgeAppearance = mehAppearance
         appearance.compactAppearance = mehAppearance

@@ -74,6 +74,19 @@ final class HomeViewController: UIViewController {
     private func setupView() {
         setupLoaderConstraints()
         setupMehCardConstraints()
+        setupBarButtons()
+    }
+
+    private func setupBarButtons() {
+        let configuration = UIImage.SymbolConfiguration(font: .h3)
+        let filterSymbol = UIImage(systemName: "slider.horizontal.3")!.withConfiguration(configuration)
+        let addSymbol = UIImage(systemName: "plus.circle.fill")!.withConfiguration(configuration)
+
+        let filterButton = UIBarButtonItem(image: filterSymbol, style: .plain, target: self, action: #selector(openFilterBoard))
+        let addButton = UIBarButtonItem(image: addSymbol, style: .plain, target: self, action: #selector(addMehItem))
+
+        navigationItem.leftBarButtonItem = filterButton
+        navigationItem.rightBarButtonItem = addButton
     }
 
     private func setupMehCardConstraints() {
@@ -114,3 +127,16 @@ extension HomeViewController: MehCardDelegate {
 
 }
 
+extension HomeViewController {
+
+    @objc
+    private func addMehItem() {
+
+    }
+
+    @objc
+    private func openFilterBoard() {
+
+    }
+
+}
