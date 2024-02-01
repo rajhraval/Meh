@@ -25,18 +25,18 @@ final class HomeViewController: UIViewController {
     }()
 
     private var shareButton: MehButton = {
-        let shareButton = MehButton(style: .icon)
+        let shareButton = MehButton(style: .symbol)
         shareButton.translatesAutoresizingMaskIntoConstraints = false
-        shareButton.font = .h2
-        shareButton.foregroundColour = .systemRed
+        shareButton.image = UIImage(systemName: "square.and.arrow.up")!
+        shareButton.backgroundColour = .systemMint
         return shareButton
     }()
 
-    private var activityLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .h0
-        return label
+    private var mehCard: MehCard =  {
+        let mehCard = MehCard()
+        mehCard.translatesAutoresizingMaskIntoConstraints = false
+        mehCard.isHidden = true
+        return mehCard
     }()
 
     private var buttonStackView: UIStackView = {
@@ -83,11 +83,11 @@ final class HomeViewController: UIViewController {
     private func bind() {
         viewModel.$activity
             .receive(on: DispatchQueue.main)
-            .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
             .sink { [weak self] randomActivity in
                 guard let self = self else { return }
                 activity = randomActivity
-                activityLabel.text = activity?.name
+                mehCard.isHidden = false
+                mehCard.activity = activity
                 Log.message("Activity is \(activity?.name ?? "NULL")")
             }
             .store(in: &cancellables)
@@ -105,23 +105,17 @@ final class HomeViewController: UIViewController {
     private func setupView() {
         setupLoaderConstraints()
         setupStackViewConstraints()
-        setupActivityLabelConstraints()
-    }
-
-    private func setupActivityLabelConstraints() {
-        view.addSubview(activityLabel)
-        activityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        activityLabel.bottomAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 
     private func setupStackViewConstraints() {
         view.addSubview(buttonStackView)
-        buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
+        buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         setupFavoriteConstraints()
         setupRefreshConstraints()
         setupShareConstraints()
+        setupMehCardConstraints()
     }
 
     private func setupRefreshConstraints() {
@@ -132,12 +126,22 @@ final class HomeViewController: UIViewController {
     private func setupFavoriteConstraints() {
         favoriteButton.addTarget(self, action: #selector(favourite), for: .touchUpInside)
         buttonStackView.addArrangedSubview(favoriteButton)
+
     }
 
     private func setupShareConstraints() {
         shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
         buttonStackView.addArrangedSubview(shareButton)
-        shareButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
+    }
+
+    private func setupMehCardConstraints() {
+        mehCard.isHidden = true
+        mehCard.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(mehCard)
+        mehCard.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
+        mehCard.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
+        mehCard.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 36).isActive = true
+        mehCard.bottomAnchor.constraint(equalTo: buttonStackView.topAnchor, constant: -36).isActive = true
     }
 
     private func setupLoaderConstraints() {

@@ -25,7 +25,7 @@ final class Decorator {
         ]
 
         mehAppearance.largeTitleTextAttributes = attributes
-        mehAppearance.titleTextAttributes = attributes
+        //mehAppearance.titleTextAttributes = attributes
 
         let barButtonItemAppearance = UIBarButtonItemAppearance(style: .plain)
         barButtonItemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.label]

@@ -33,7 +33,7 @@ final class MehButton: UIButton {
         }
     }
 
-    var size: UIButton.Configuration.Size = .medium {
+    var size: UIButton.Configuration.Size = .large {
         didSet {
             setupButton()
         }

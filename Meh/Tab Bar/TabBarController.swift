@@ -17,11 +17,12 @@ final class TabBarController: UITabBarController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewControllers = [
+        let controllers = [
             TabItem.favorite.viewController,
             TabItem.home.viewController,
             TabItem.settings.viewController
         ]
+        viewControllers = controllers
         selectedIndex = TabItem.home.tag
     }
 
