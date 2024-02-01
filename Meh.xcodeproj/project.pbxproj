@@ -43,6 +43,10 @@
 		CF204FBF2B6A7BE40084E90C /* MehButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FBD2B6A7BE40084E90C /* MehButton.swift */; };
 		CF204FC12B6AA0CB0084E90C /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC02B6AA0CB0084E90C /* Decorator.swift */; };
 		CF204FC22B6AA0CB0084E90C /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC02B6AA0CB0084E90C /* Decorator.swift */; };
+		CF204FC42B6AA7340084E90C /* MehCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC32B6AA7340084E90C /* MehCard.swift */; };
+		CF204FC52B6AA7340084E90C /* MehCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC32B6AA7340084E90C /* MehCard.swift */; };
+		CF204FC82B6AACA00084E90C /* CAGradientLayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */; };
+		CF204FC92B6AACA00084E90C /* CAGradientLayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */; };
 		CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */; };
 		CF54C62C2B66743C00CA8F74 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */; };
 		CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62D2B668EE000CA8F74 /* ActivityService.swift */; };
@@ -51,6 +55,10 @@
 		CF54C6322B668F0200CA8F74 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6302B668F0200CA8F74 /* APIError.swift */; };
 		CF54C6382B66919000CA8F74 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6372B66919000CA8F74 /* Activity.swift */; };
 		CF54C6392B66919000CA8F74 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6372B66919000CA8F74 /* Activity.swift */; };
+		CF5831552B6B435E00DA27F3 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831542B6B435E00DA27F3 /* UIColor+.swift */; };
+		CF5831562B6B435E00DA27F3 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831542B6B435E00DA27F3 /* UIColor+.swift */; };
+		CF5831582B6B439B00DA27F3 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831572B6B439B00DA27F3 /* GradientColor.swift */; };
+		CF5831592B6B439B00DA27F3 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831572B6B439B00DA27F3 /* GradientColor.swift */; };
 		CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */; };
 		CF5DAC5A2B66AF8F00F90A25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */; };
 		CF9DE1962B68046400CBE242 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1952B68046400CBE242 /* FavoriteViewController.swift */; };
@@ -108,10 +116,14 @@
 		CF204FBA2B6A75F70084E90C /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		CF204FBD2B6A7BE40084E90C /* MehButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehButton.swift; sourceTree = "<group>"; };
 		CF204FC02B6AA0CB0084E90C /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
+		CF204FC32B6AA7340084E90C /* MehCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehCard.swift; sourceTree = "<group>"; };
+		CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+.swift"; sourceTree = "<group>"; };
 		CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		CF54C62D2B668EE000CA8F74 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		CF54C6302B668F0200CA8F74 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		CF54C6372B66919000CA8F74 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		CF5831542B6B435E00DA27F3 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		CF5831572B6B439B00DA27F3 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColor.swift; sourceTree = "<group>"; };
 		CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CF9DE1952B68046400CBE242 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		CF9DE1982B68047300CBE242 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
@@ -180,6 +192,7 @@
 			children = (
 				CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */,
 				CF204FBD2B6A7BE40084E90C /* MehButton.swift */,
+				CF204FC32B6AA7340084E90C /* MehCard.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -196,6 +209,20 @@
 				CF204FA42B6A75690084E90C /* PlusJakartaSans-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CF204FC62B6AAAAD0084E90C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8A91B2B662A0900E617C5 /* UserDefaults+.swift */,
+				CFB8A94A2B66420F00E617C5 /* URL+.swift */,
+				CF197AEA2B690B6D00F4AFE7 /* UICollectionView+.swift */,
+				CF197AF32B692B8500F4AFE7 /* Notification+.swift */,
+				CF204FB72B6A75E00084E90C /* UIFont+.swift */,
+				CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */,
+				CF5831542B6B435E00DA27F3 /* UIColor+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CF54C6332B668F0D00CA8F74 /* Networking */ = {
@@ -283,6 +310,7 @@
 				CFB8A8E92B66238100E617C5 /* Assets.xcassets */,
 				CFB8A8EB2B66238100E617C5 /* LaunchScreen.storyboard */,
 				CF204FB62B6A75760084E90C /* Fonts */,
+				CF204FC62B6AAAAD0084E90C /* Extensions */,
 				CFB8A91E2B662A3F00E617C5 /* Helpers */,
 				CF54C6332B668F0D00CA8F74 /* Networking */,
 				CF197AE92B690B4E00F4AFE7 /* UI Components */,
@@ -305,14 +333,10 @@
 			isa = PBXGroup;
 			children = (
 				CFB8A8F42B66263500E617C5 /* Constants.swift */,
-				CFB8A91B2B662A0900E617C5 /* UserDefaults+.swift */,
-				CFB8A94A2B66420F00E617C5 /* URL+.swift */,
 				CFB8A94D2B6643AF00E617C5 /* Logger.swift */,
-				CF197AEA2B690B6D00F4AFE7 /* UICollectionView+.swift */,
-				CF197AF32B692B8500F4AFE7 /* Notification+.swift */,
-				CF204FB72B6A75E00084E90C /* UIFont+.swift */,
 				CF204FBA2B6A75F70084E90C /* FontHelper.swift */,
 				CF204FC02B6AA0CB0084E90C /* Decorator.swift */,
+				CF5831572B6B439B00DA27F3 /* GradientColor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -467,9 +491,13 @@
 				CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */,
 				CFB8A8E32B66238000E617C5 /* SceneDelegate.swift in Sources */,
 				CF9DE1992B68047300CBE242 /* FavoriteViewModel.swift in Sources */,
+				CF5831552B6B435E00DA27F3 /* UIColor+.swift in Sources */,
 				CFB8A8F52B66263500E617C5 /* Constants.swift in Sources */,
 				CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */,
 				CF204FB82B6A75E00084E90C /* UIFont+.swift in Sources */,
+				CF5831582B6B439B00DA27F3 /* GradientColor.swift in Sources */,
+				CF204FC42B6AA7340084E90C /* MehCard.swift in Sources */,
+				CF204FC82B6AACA00084E90C /* CAGradientLayer+.swift in Sources */,
 				CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */,
 				CF9DE1A82B6806FF00CBE242 /* SettingsViewModel.swift in Sources */,
 				CF197AF12B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */,
@@ -505,9 +533,13 @@
 				CF197AC82B68EF7200F4AFE7 /* API.swift in Sources */,
 				CFB8A90F2B66269E00E617C5 /* SceneDelegate.swift in Sources */,
 				CF9DE19A2B68047300CBE242 /* FavoriteViewModel.swift in Sources */,
+				CF5831562B6B435E00DA27F3 /* UIColor+.swift in Sources */,
 				CFB8A9132B66269E00E617C5 /* Constants.swift in Sources */,
 				CF5DAC5A2B66AF8F00F90A25 /* HomeViewModel.swift in Sources */,
 				CF204FB92B6A75E00084E90C /* UIFont+.swift in Sources */,
+				CF5831592B6B439B00DA27F3 /* GradientColor.swift in Sources */,
+				CF204FC52B6AA7340084E90C /* MehCard.swift in Sources */,
+				CF204FC92B6AACA00084E90C /* CAGradientLayer+.swift in Sources */,
 				CF54C62C2B66743C00CA8F74 /* APIEndpoint.swift in Sources */,
 				CF9DE1A92B6806FF00CBE242 /* SettingsViewModel.swift in Sources */,
 				CF197AF22B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */,
