@@ -10,42 +10,11 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    private var refreshButton: MehButton = {
-        let refreshButton = MehButton(style: .text)
-        refreshButton.translatesAutoresizingMaskIntoConstraints = false
-        refreshButton.title = "Meh"
-        return refreshButton
-    }()
-
-    private var favoriteButton: MehButton = {
-        let favoriteButton = MehButton(style: .symbol)
-        favoriteButton.translatesAutoresizingMaskIntoConstraints = false
-        favoriteButton.backgroundColour = .systemPink
-        return favoriteButton
-    }()
-
-    private var shareButton: MehButton = {
-        let shareButton = MehButton(style: .symbol)
-        shareButton.translatesAutoresizingMaskIntoConstraints = false
-        shareButton.image = UIImage(systemName: "square.and.arrow.up")!
-        shareButton.backgroundColour = .systemMint
-        return shareButton
-    }()
-
     private var mehCard: MehCard =  {
         let mehCard = MehCard()
         mehCard.translatesAutoresizingMaskIntoConstraints = false
         mehCard.isHidden = true
         return mehCard
-    }()
-
-    private var buttonStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
-        stackView.spacing = 8
-        return stackView
     }()
 
     private var loader: UIActivityIndicatorView = {
@@ -104,44 +73,18 @@ final class HomeViewController: UIViewController {
 
     private func setupView() {
         setupLoaderConstraints()
-        setupStackViewConstraints()
-    }
-
-    private func setupStackViewConstraints() {
-        view.addSubview(buttonStackView)
-        buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
-        buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        setupFavoriteConstraints()
-        setupRefreshConstraints()
-        setupShareConstraints()
         setupMehCardConstraints()
-    }
-
-    private func setupRefreshConstraints() {
-        refreshButton.addTarget(self, action: #selector(refresh), for: .touchUpInside)
-        buttonStackView.addArrangedSubview(refreshButton)
-    }
-
-    private func setupFavoriteConstraints() {
-        favoriteButton.addTarget(self, action: #selector(favourite), for: .touchUpInside)
-        buttonStackView.addArrangedSubview(favoriteButton)
-
-    }
-
-    private func setupShareConstraints() {
-        shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
-        buttonStackView.addArrangedSubview(shareButton)
     }
 
     private func setupMehCardConstraints() {
         mehCard.isHidden = true
+        mehCard.delegate = self
         mehCard.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mehCard)
-        mehCard.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
-        mehCard.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        mehCard.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 36).isActive = true
-        mehCard.bottomAnchor.constraint(equalTo: buttonStackView.topAnchor, constant: -36).isActive = true
+        mehCard.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        mehCard.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        mehCard.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18).isActive = true
+        mehCard.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24).isActive = true
     }
 
     private func setupLoaderConstraints() {
@@ -151,22 +94,23 @@ final class HomeViewController: UIViewController {
         loader.startAnimating()
     }
 
-    @objc
-    func refresh(_ sender: UIButton) {
+}
+
+extension HomeViewController: MehCardDelegate {
+
+    func refreshTapped() {
         loader.startAnimating()
         viewModel.fetchActivity()
     }
 
-    @objc
-    func favourite(_ sender: UIButton) {
+    func favoriteTapped() {
         guard let activity = activity else { return }
         viewModel.addActivity(activity)
     }
 
-    @objc
-    func share(_ sender: UIButton) {
+    func shareTapped() {
 
     }
-    
+
 }
 

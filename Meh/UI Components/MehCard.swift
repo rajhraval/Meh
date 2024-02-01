@@ -7,12 +7,48 @@
 
 import UIKit
 
+protocol MehCardDelegate: AnyObject {
+    func refreshTapped()
+    func favoriteTapped()
+    func shareTapped()
+}
+
 final class MehCard: UIView {
 
     private var containerView: UIView = {
         let containerView = UIView()
         containerView.translatesAutoresizingMaskIntoConstraints = false
         return containerView
+    }()
+
+    private var buttonStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.spacing = 8
+        return stackView
+    }()
+
+    private var refreshButton: MehButton = {
+        let refreshButton = MehButton(style: .label)
+        refreshButton.translatesAutoresizingMaskIntoConstraints = false
+        refreshButton.title = "Meh"
+        return refreshButton
+    }()
+
+    private var favoriteButton: MehButton = {
+        let favoriteButton = MehButton(style: .icon)
+        favoriteButton.translatesAutoresizingMaskIntoConstraints = false
+        favoriteButton.image = UIImage(systemName: "heart.fill")!
+        return favoriteButton
+    }()
+
+    private var shareButton: MehButton = {
+        let shareButton = MehButton(style: .icon)
+        shareButton.translatesAutoresizingMaskIntoConstraints = false
+        shareButton.image = UIImage(systemName: "square.and.arrow.up")!
+        return shareButton
     }()
 
     private var activityLabel: UILabel = {
@@ -32,6 +68,8 @@ final class MehCard: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .h1
         label.textColor = .white.withAlphaComponent(0.6)
+        label.minimumScaleFactor = 0.7
+        label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
@@ -42,6 +80,8 @@ final class MehCard: UIView {
             setupView()
         }
     }
+
+    weak var delegate: MehCardDelegate?
 
     var activity: Activity? {
         didSet {
@@ -97,9 +137,52 @@ final class MehCard: UIView {
         activityLabel.text = activity?.name ?? "No Activity? Meh :("
         containerView.addSubview(activityLabel)
         activityLabel.topAnchor.constraint(greaterThanOrEqualTo: promptLabel.bottomAnchor, constant: 28).isActive = true
-        activityLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -28).isActive = true
         activityLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 28).isActive = true
         activityLabel.trailingAnchor.constraint(lessThanOrEqualTo: containerView.trailingAnchor, constant: -28).isActive = true
+        setupStackViewConstraints()
     }
+
+    private func setupStackViewConstraints() {
+        containerView.addSubview(buttonStackView)
+        buttonStackView.topAnchor.constraint(equalTo: activityLabel.bottomAnchor, constant: 28).isActive = true
+        buttonStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
+        buttonStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
+        buttonStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -28).isActive = true
+        setupFavoriteConstraints()
+        setupRefreshConstraints()
+        setupShareConstraints()
+    }
+
+    private func setupRefreshConstraints() {
+        refreshButton.addTarget(self, action: #selector(refresh), for: .touchUpInside)
+        buttonStackView.addArrangedSubview(refreshButton)
+    }
+
+    private func setupFavoriteConstraints() {
+        favoriteButton.addTarget(self, action: #selector(favourite), for: .touchUpInside)
+        buttonStackView.addArrangedSubview(favoriteButton)
+
+    }
+
+    private func setupShareConstraints() {
+        shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
+        buttonStackView.addArrangedSubview(shareButton)
+    }
+
+    @objc
+    private func refresh(_ sender: UIButton) {
+        delegate?.refreshTapped()
+    }
+
+    @objc
+    private func favourite(_ sender: UIButton) {
+        delegate?.favoriteTapped()
+    }
+
+    @objc
+    private func share(_ sender: UIButton) {
+        delegate?.shareTapped()
+    }
+
 
 }

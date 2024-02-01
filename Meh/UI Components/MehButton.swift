@@ -10,6 +10,7 @@ import UIKit
 enum MehButtonStyle {
     case icon
     case symbol
+    case label
     case text
 }
 
@@ -79,24 +80,35 @@ final class MehButton: UIButton {
     }
 
     private func setupButton() {
-        var configuration: UIButton.Configuration = style != .icon ? .filled() : .plain()
-        configuration.buttonSize = size
-        configuration.baseForegroundColor = foregroundColour
-        if style == .text  {
+        var configuration: UIButton.Configuration
+        switch style {
+        case .symbol, .icon:
+            configuration = style == .symbol ? .filled() : .plain()
+            let fontConfig = UIImage.SymbolConfiguration(font: style == .symbol ? .h3 : .symbol)
+            configuration.image = image.applyingSymbolConfiguration(fontConfig)
+            configuration.baseForegroundColor = foregroundColour
+
+            if style == .symbol {
+                configuration.buttonSize = size
+                configuration.cornerStyle = radius
+                configuration.baseBackgroundColor = backgroundColour
+            }
+        case .text, .label:
+            configuration = style == .text ? .filled() : .plain()
+
+            configuration.baseForegroundColor = foregroundColour
             configuration.title = title
             configuration.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
                 var outgoing = incoming
                 outgoing.font = UIFont(name: self.font.fontName, size: self.font.pointSize)!
                 return outgoing
             }
-        }
-        if style != .icon {
-            configuration.cornerStyle = radius
-            configuration.baseBackgroundColor = backgroundColour
-        }
-        if style != .text {
-            let fontConfig = UIImage.SymbolConfiguration(font: style == .icon ? .symbol : .h3)
-            configuration.image = image.applyingSymbolConfiguration(fontConfig)
+
+            if style == .text {
+                configuration.buttonSize = size
+                configuration.cornerStyle = radius
+                configuration.baseBackgroundColor = backgroundColour
+            }
         }
         self.configuration = configuration
     }
