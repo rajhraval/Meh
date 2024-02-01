@@ -27,19 +27,9 @@ final class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
     func setup() {
-        title = "Favorites"
-        view.backgroundColor = .white
-        addGradient()
-    }
-
-    func addGradient() {
-        let gradientLayer = CAGradientLayer.createRandomGradientLayer(in: view.frame)
-        view.layer.addSublayer(gradientLayer)
+        title = "Settings"
+        view.backgroundColor = .systemBackground
     }
 
 }

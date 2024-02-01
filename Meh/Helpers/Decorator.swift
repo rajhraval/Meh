@@ -13,6 +13,7 @@ final class Decorator {
 
     func decorate() {
         setupCustomNavigationBarAppearance()
+        setupCustomTabBarAppearance()
     }
 
     private func setupCustomNavigationBarAppearance() {
@@ -28,22 +29,33 @@ final class Decorator {
         //mehAppearance.titleTextAttributes = attributes
 
         let barButtonItemAppearance = UIBarButtonItemAppearance(style: .plain)
-        barButtonItemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.label]
-        barButtonItemAppearance.disabled.titleTextAttributes = [.foregroundColor: UIColor.tertiaryLabel]
-        barButtonItemAppearance.highlighted.titleTextAttributes = [.foregroundColor: UIColor.systemGray]
-        barButtonItemAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.label]
+        barButtonItemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.label, .font: UIFont.pSmall]
+        barButtonItemAppearance.disabled.titleTextAttributes = [.foregroundColor: UIColor.tertiaryLabel, .font: UIFont.pSmall]
+        barButtonItemAppearance.highlighted.titleTextAttributes = [.foregroundColor: UIColor.systemGray, .font: UIFont.pSmall]
+        barButtonItemAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.label, .font: UIFont.pSmall]
 
         mehAppearance.buttonAppearance = barButtonItemAppearance
         mehAppearance.doneButtonAppearance = barButtonItemAppearance
         mehAppearance.backButtonAppearance = barButtonItemAppearance
 
         let appearance = UINavigationBar.appearance()
-        appearance.tintColor = .black
+        appearance.tintColor = .label
         appearance.prefersLargeTitles = true
         appearance.scrollEdgeAppearance = mehAppearance
         appearance.compactAppearance = mehAppearance
         appearance.standardAppearance = mehAppearance
         appearance.compactScrollEdgeAppearance = mehAppearance
+    }
+
+    private func setupCustomTabBarAppearance() {
+        let mehAppearance = UITabBarAppearance()
+        mehAppearance.configureWithTransparentBackground()
+        mehAppearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+
+        let appearance = UITabBar.appearance()
+        appearance.tintColor = .label
+        appearance.standardAppearance = mehAppearance
+        appearance.scrollEdgeAppearance = mehAppearance
     }
 
 }

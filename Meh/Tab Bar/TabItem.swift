@@ -12,18 +12,18 @@ enum TabItem: String, CaseIterable {
     case settings
     case favorite
 
-    var title: String {
-        return rawValue.capitalized
+    var title: String? {
+        nil
     }
 
     var image: UIImage {
         switch self {
         case .home:
-            return UIImage(systemName: "house.fill")!
+            return UIImage(systemName: "sparkles")!
         case .settings:
             return UIImage(systemName: "gearshape.fill")!
         case .favorite:
-            return UIImage(systemName: "heart.fill")!
+            return UIImage(systemName: "heart.text.square.fill")!
         }
     }
 
@@ -39,7 +39,10 @@ enum TabItem: String, CaseIterable {
     }
 
     var tabBarItem: UITabBarItem {
-        return UITabBarItem(title: title, image: image, tag: tag)
+        let congfiguration = UIImage.SymbolConfiguration(font: .p)
+        let adjustedImage = image.withConfiguration(congfiguration).withBaselineOffset(fromBottom: 14)
+        let item = UITabBarItem(title: title, image: adjustedImage, tag: tag)
+        return item
     }
 
     var viewController: UIViewController {

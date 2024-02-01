@@ -8,93 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AC62B68EF7200F4AFE7 /* API.swift */; };
-		CF197AC82B68EF7200F4AFE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AC62B68EF7200F4AFE7 /* API.swift */; };
 		CF197AD32B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD12B68F61400F4AFE7 /* MehItem+CoreDataClass.swift */; };
-		CF197AD42B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD12B68F61400F4AFE7 /* MehItem+CoreDataClass.swift */; };
 		CF197AD52B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD22B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift */; };
-		CF197AD62B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD22B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift */; };
 		CF197AE72B690B1B00F4AFE7 /* LayoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */; };
-		CF197AE82B690B1B00F4AFE7 /* LayoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */; };
 		CF197AEB2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AEA2B690B6D00F4AFE7 /* UICollectionView+.swift */; };
-		CF197AEC2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AEA2B690B6D00F4AFE7 /* UICollectionView+.swift */; };
 		CF197AF12B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AF02B690D4D00F4AFE7 /* FavoriteListCell.swift */; };
-		CF197AF22B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AF02B690D4D00F4AFE7 /* FavoriteListCell.swift */; };
 		CF197AF42B692B8500F4AFE7 /* Notification+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AF32B692B8500F4AFE7 /* Notification+.swift */; };
-		CF197AF52B692B8500F4AFE7 /* Notification+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AF32B692B8500F4AFE7 /* Notification+.swift */; };
 		CF204FA82B6A75690084E90C /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA12B6A75690084E90C /* PlusJakartaSans-Bold.ttf */; };
-		CF204FA92B6A75690084E90C /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA12B6A75690084E90C /* PlusJakartaSans-Bold.ttf */; };
 		CF204FAA2B6A75690084E90C /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA22B6A75690084E90C /* PlusJakartaSans-Regular.ttf */; };
-		CF204FAB2B6A75690084E90C /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA22B6A75690084E90C /* PlusJakartaSans-Regular.ttf */; };
 		CF204FAC2B6A75690084E90C /* PlusJakartaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA32B6A75690084E90C /* PlusJakartaSans-Light.ttf */; };
-		CF204FAD2B6A75690084E90C /* PlusJakartaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA32B6A75690084E90C /* PlusJakartaSans-Light.ttf */; };
 		CF204FAE2B6A75690084E90C /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA42B6A75690084E90C /* PlusJakartaSans-SemiBold.ttf */; };
-		CF204FAF2B6A75690084E90C /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA42B6A75690084E90C /* PlusJakartaSans-SemiBold.ttf */; };
 		CF204FB02B6A75690084E90C /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA52B6A75690084E90C /* PlusJakartaSans-Medium.ttf */; };
-		CF204FB12B6A75690084E90C /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA52B6A75690084E90C /* PlusJakartaSans-Medium.ttf */; };
 		CF204FB22B6A75690084E90C /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA62B6A75690084E90C /* PlusJakartaSans-ExtraBold.ttf */; };
-		CF204FB32B6A75690084E90C /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA62B6A75690084E90C /* PlusJakartaSans-ExtraBold.ttf */; };
 		CF204FB42B6A75690084E90C /* PlusJakartaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA72B6A75690084E90C /* PlusJakartaSans-ExtraLight.ttf */; };
-		CF204FB52B6A75690084E90C /* PlusJakartaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF204FA72B6A75690084E90C /* PlusJakartaSans-ExtraLight.ttf */; };
 		CF204FB82B6A75E00084E90C /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FB72B6A75E00084E90C /* UIFont+.swift */; };
-		CF204FB92B6A75E00084E90C /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FB72B6A75E00084E90C /* UIFont+.swift */; };
 		CF204FBB2B6A75F70084E90C /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FBA2B6A75F70084E90C /* FontHelper.swift */; };
-		CF204FBC2B6A75F70084E90C /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FBA2B6A75F70084E90C /* FontHelper.swift */; };
 		CF204FBE2B6A7BE40084E90C /* MehButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FBD2B6A7BE40084E90C /* MehButton.swift */; };
-		CF204FBF2B6A7BE40084E90C /* MehButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FBD2B6A7BE40084E90C /* MehButton.swift */; };
 		CF204FC12B6AA0CB0084E90C /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC02B6AA0CB0084E90C /* Decorator.swift */; };
-		CF204FC22B6AA0CB0084E90C /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC02B6AA0CB0084E90C /* Decorator.swift */; };
 		CF204FC42B6AA7340084E90C /* MehCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC32B6AA7340084E90C /* MehCard.swift */; };
-		CF204FC52B6AA7340084E90C /* MehCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC32B6AA7340084E90C /* MehCard.swift */; };
 		CF204FC82B6AACA00084E90C /* CAGradientLayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */; };
-		CF204FC92B6AACA00084E90C /* CAGradientLayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */; };
 		CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */; };
-		CF54C62C2B66743C00CA8F74 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */; };
 		CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62D2B668EE000CA8F74 /* ActivityService.swift */; };
-		CF54C62F2B668EE000CA8F74 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62D2B668EE000CA8F74 /* ActivityService.swift */; };
 		CF54C6312B668F0200CA8F74 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6302B668F0200CA8F74 /* APIError.swift */; };
-		CF54C6322B668F0200CA8F74 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6302B668F0200CA8F74 /* APIError.swift */; };
 		CF54C6382B66919000CA8F74 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6372B66919000CA8F74 /* Activity.swift */; };
-		CF54C6392B66919000CA8F74 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6372B66919000CA8F74 /* Activity.swift */; };
 		CF5831552B6B435E00DA27F3 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831542B6B435E00DA27F3 /* UIColor+.swift */; };
-		CF5831562B6B435E00DA27F3 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831542B6B435E00DA27F3 /* UIColor+.swift */; };
 		CF5831582B6B439B00DA27F3 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831572B6B439B00DA27F3 /* GradientColor.swift */; };
-		CF5831592B6B439B00DA27F3 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831572B6B439B00DA27F3 /* GradientColor.swift */; };
 		CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */; };
-		CF5DAC5A2B66AF8F00F90A25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */; };
 		CF9DE1962B68046400CBE242 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1952B68046400CBE242 /* FavoriteViewController.swift */; };
-		CF9DE1972B68046400CBE242 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1952B68046400CBE242 /* FavoriteViewController.swift */; };
 		CF9DE1992B68047300CBE242 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1982B68047300CBE242 /* FavoriteViewModel.swift */; };
-		CF9DE19A2B68047300CBE242 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1982B68047300CBE242 /* FavoriteViewModel.swift */; };
 		CF9DE19E2B68051000CBE242 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE19D2B68051000CBE242 /* TabBarController.swift */; };
-		CF9DE19F2B68051000CBE242 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE19D2B68051000CBE242 /* TabBarController.swift */; };
 		CF9DE1A12B6805DE00CBE242 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1A02B6805DE00CBE242 /* TabItem.swift */; };
-		CF9DE1A22B6805DE00CBE242 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1A02B6805DE00CBE242 /* TabItem.swift */; };
 		CF9DE1A52B6806E100CBE242 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1A42B6806E100CBE242 /* SettingsViewController.swift */; };
-		CF9DE1A62B6806E100CBE242 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1A42B6806E100CBE242 /* SettingsViewController.swift */; };
 		CF9DE1A82B6806FF00CBE242 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1A72B6806FF00CBE242 /* SettingsViewModel.swift */; };
-		CF9DE1A92B6806FF00CBE242 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1A72B6806FF00CBE242 /* SettingsViewModel.swift */; };
 		CFB8A8E12B66238000E617C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E02B66238000E617C5 /* AppDelegate.swift */; };
 		CFB8A8E32B66238000E617C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E22B66238000E617C5 /* SceneDelegate.swift */; };
 		CFB8A8E52B66238000E617C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E42B66238000E617C5 /* HomeViewController.swift */; };
 		CFB8A8ED2B66238100E617C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB8A8EB2B66238100E617C5 /* LaunchScreen.storyboard */; };
 		CFB8A8F52B66263500E617C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8F42B66263500E617C5 /* Constants.swift */; };
-		CFB8A90E2B66269E00E617C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E02B66238000E617C5 /* AppDelegate.swift */; };
-		CFB8A90F2B66269E00E617C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E22B66238000E617C5 /* SceneDelegate.swift */; };
-		CFB8A9102B66269E00E617C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8E42B66238000E617C5 /* HomeViewController.swift */; };
-		CFB8A9132B66269E00E617C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A8F42B66263500E617C5 /* Constants.swift */; };
-		CFB8A9162B6626C000E617C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB8A8E92B66238100E617C5 /* Assets.xcassets */; };
 		CFB8A9172B6626C600E617C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB8A8E92B66238100E617C5 /* Assets.xcassets */; };
 		CFB8A91C2B662A0900E617C5 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A91B2B662A0900E617C5 /* UserDefaults+.swift */; };
-		CFB8A91D2B662A0900E617C5 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A91B2B662A0900E617C5 /* UserDefaults+.swift */; };
 		CFB8A9442B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A9422B6640D000E617C5 /* MehModel.xcdatamodeld */; };
-		CFB8A9452B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A9422B6640D000E617C5 /* MehModel.xcdatamodeld */; };
 		CFB8A9482B6640F900E617C5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A9472B6640F900E617C5 /* CoreDataStack.swift */; };
-		CFB8A9492B6640F900E617C5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A9472B6640F900E617C5 /* CoreDataStack.swift */; };
 		CFB8A94B2B66420F00E617C5 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A94A2B66420F00E617C5 /* URL+.swift */; };
-		CFB8A94C2B66420F00E617C5 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A94A2B66420F00E617C5 /* URL+.swift */; };
 		CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A94D2B6643AF00E617C5 /* Logger.swift */; };
-		CFB8A94F2B6643AF00E617C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A94D2B6643AF00E617C5 /* Logger.swift */; };
-		CFB8A9742B66483900E617C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB8A8EB2B66238100E617C5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,10 +95,7 @@
 		CFB8A8EC2B66238100E617C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFB8A8EE2B66238100E617C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB8A8F42B66263500E617C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CFB8A8FA2B66266300E617C5 /* Meh Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meh Beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFB8A90A2B66266400E617C5 /* Beta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Beta-Info.plist"; sourceTree = "<group>"; };
 		CFB8A9182B6628AD00E617C5 /* Meh.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Meh.entitlements; sourceTree = "<group>"; };
-		CFB8A9192B6628D700E617C5 /* Meh Beta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Meh Beta.entitlements"; sourceTree = "<group>"; };
 		CFB8A91B2B662A0900E617C5 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		CFB8A9432B6640D000E617C5 /* MehModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MehModel.xcdatamodel; sourceTree = "<group>"; };
 		CFB8A9472B6640F900E617C5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -152,13 +105,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		CFB8A8DA2B66238000E617C5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFB8A8F72B66266300E617C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				CFB8A8DD2B66238000E617C5 /* Meh.app */,
-				CFB8A8FA2B66266300E617C5 /* Meh Beta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,9 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				CFB8A9182B6628AD00E617C5 /* Meh.entitlements */,
-				CFB8A9192B6628D700E617C5 /* Meh Beta.entitlements */,
 				CFB8A8EE2B66238100E617C5 /* Info.plist */,
-				CFB8A90A2B66266400E617C5 /* Beta-Info.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -372,23 +315,6 @@
 			productReference = CFB8A8DD2B66238000E617C5 /* Meh.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CFB8A8F92B66266300E617C5 /* Meh Beta */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFB8A90B2B66266400E617C5 /* Build configuration list for PBXNativeTarget "Meh Beta" */;
-			buildPhases = (
-				CFB8A8F62B66266300E617C5 /* Sources */,
-				CFB8A8F72B66266300E617C5 /* Frameworks */,
-				CFB8A8F82B66266300E617C5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Meh Beta";
-			productName = "Meh Beta";
-			productReference = CFB8A8FA2B66266300E617C5 /* Meh Beta.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -400,9 +326,6 @@
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					CFB8A8DC2B66238000E617C5 = {
-						CreatedOnToolsVersion = 15.1;
-					};
-					CFB8A8F92B66266300E617C5 = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
@@ -421,7 +344,6 @@
 			projectRoot = "";
 			targets = (
 				CFB8A8DC2B66238000E617C5 /* Meh */,
-				CFB8A8F92B66266300E617C5 /* Meh Beta */,
 			);
 		};
 /* End PBXProject section */
@@ -440,22 +362,6 @@
 				CF204FAC2B6A75690084E90C /* PlusJakartaSans-Light.ttf in Resources */,
 				CF204FB42B6A75690084E90C /* PlusJakartaSans-ExtraLight.ttf in Resources */,
 				CFB8A8ED2B66238100E617C5 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFB8A8F82B66266300E617C5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF204FA92B6A75690084E90C /* PlusJakartaSans-Bold.ttf in Resources */,
-				CF204FAF2B6A75690084E90C /* PlusJakartaSans-SemiBold.ttf in Resources */,
-				CF204FB32B6A75690084E90C /* PlusJakartaSans-ExtraBold.ttf in Resources */,
-				CF204FAB2B6A75690084E90C /* PlusJakartaSans-Regular.ttf in Resources */,
-				CF204FB12B6A75690084E90C /* PlusJakartaSans-Medium.ttf in Resources */,
-				CFB8A9742B66483900E617C5 /* LaunchScreen.storyboard in Resources */,
-				CF204FAD2B6A75690084E90C /* PlusJakartaSans-Light.ttf in Resources */,
-				CF204FB52B6A75690084E90C /* PlusJakartaSans-ExtraLight.ttf in Resources */,
-				CFB8A9162B6626C000E617C5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,48 +407,6 @@
 				CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */,
 				CF9DE1A82B6806FF00CBE242 /* SettingsViewModel.swift in Sources */,
 				CF197AF12B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFB8A8F62B66266300E617C5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF197AE82B690B1B00F4AFE7 /* LayoutType.swift in Sources */,
-				CFB8A9492B6640F900E617C5 /* CoreDataStack.swift in Sources */,
-				CFB8A9452B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */,
-				CF54C6392B66919000CA8F74 /* Activity.swift in Sources */,
-				CF197AD62B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */,
-				CF9DE1A62B6806E100CBE242 /* SettingsViewController.swift in Sources */,
-				CF204FBF2B6A7BE40084E90C /* MehButton.swift in Sources */,
-				CF9DE19F2B68051000CBE242 /* TabBarController.swift in Sources */,
-				CFB8A9102B66269E00E617C5 /* HomeViewController.swift in Sources */,
-				CF204FBC2B6A75F70084E90C /* FontHelper.swift in Sources */,
-				CFB8A94C2B66420F00E617C5 /* URL+.swift in Sources */,
-				CF197AEC2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */,
-				CF54C62F2B668EE000CA8F74 /* ActivityService.swift in Sources */,
-				CF197AF52B692B8500F4AFE7 /* Notification+.swift in Sources */,
-				CF9DE1972B68046400CBE242 /* FavoriteViewController.swift in Sources */,
-				CF197AD42B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */,
-				CF54C6322B668F0200CA8F74 /* APIError.swift in Sources */,
-				CF204FC22B6AA0CB0084E90C /* Decorator.swift in Sources */,
-				CFB8A94F2B6643AF00E617C5 /* Logger.swift in Sources */,
-				CFB8A90E2B66269E00E617C5 /* AppDelegate.swift in Sources */,
-				CF9DE1A22B6805DE00CBE242 /* TabItem.swift in Sources */,
-				CFB8A91D2B662A0900E617C5 /* UserDefaults+.swift in Sources */,
-				CF197AC82B68EF7200F4AFE7 /* API.swift in Sources */,
-				CFB8A90F2B66269E00E617C5 /* SceneDelegate.swift in Sources */,
-				CF9DE19A2B68047300CBE242 /* FavoriteViewModel.swift in Sources */,
-				CF5831562B6B435E00DA27F3 /* UIColor+.swift in Sources */,
-				CFB8A9132B66269E00E617C5 /* Constants.swift in Sources */,
-				CF5DAC5A2B66AF8F00F90A25 /* HomeViewModel.swift in Sources */,
-				CF204FB92B6A75E00084E90C /* UIFont+.swift in Sources */,
-				CF5831592B6B439B00DA27F3 /* GradientColor.swift in Sources */,
-				CF204FC52B6AA7340084E90C /* MehCard.swift in Sources */,
-				CF204FC92B6AACA00084E90C /* CAGradientLayer+.swift in Sources */,
-				CF54C62C2B66743C00CA8F74 /* APIEndpoint.swift in Sources */,
-				CF9DE1A92B6806FF00CBE242 /* SettingsViewModel.swift in Sources */,
-				CF197AF22B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +559,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -728,6 +593,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -739,74 +605,6 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		CFB8A90C2B66266400E617C5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Beta";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Meh/Config/Meh Beta.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SJ64B32FPH;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Meh/Config/Beta-Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rajraval.Meh-Beta";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited) BETA";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		CFB8A90D2B66266400E617C5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Beta";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Meh/Config/Meh Beta.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SJ64B32FPH;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Meh/Config/Beta-Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rajraval.Meh-Beta";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = BETA;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -830,15 +628,6 @@
 			buildConfigurations = (
 				CFB8A8F22B66238100E617C5 /* Debug */,
 				CFB8A8F32B66238100E617C5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CFB8A90B2B66266400E617C5 /* Build configuration list for PBXNativeTarget "Meh Beta" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFB8A90C2B66266400E617C5 /* Debug */,
-				CFB8A90D2B66266400E617C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

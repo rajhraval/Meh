@@ -44,7 +44,7 @@ final class HomeViewController: UIViewController {
 
     private func setup() {
         title = "Feeling Meh?"
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemGroupedBackground
         setupView()
         bind()
     }
@@ -78,9 +78,8 @@ final class HomeViewController: UIViewController {
     }
 
     private func setupBarButtons() {
-        let configuration = UIImage.SymbolConfiguration(font: .h3)
-        let filterSymbol = UIImage(systemName: "slider.horizontal.3")!.withConfiguration(configuration)
-        let addSymbol = UIImage(systemName: "plus.circle.fill")!.withConfiguration(configuration)
+        let filterSymbol = UIImage(systemName: "slider.horizontal.3")
+        let addSymbol = UIImage(systemName: "plus.circle.fill")
 
         let filterButton = UIBarButtonItem(image: filterSymbol, style: .plain, target: self, action: #selector(openFilterBoard))
         let addButton = UIBarButtonItem(image: addSymbol, style: .plain, target: self, action: #selector(addMehItem))
