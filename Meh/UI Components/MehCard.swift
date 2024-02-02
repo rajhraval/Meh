@@ -147,7 +147,7 @@ final class MehCard: UIView {
         buttonStackView.topAnchor.constraint(equalTo: activityLabel.bottomAnchor, constant: 28).isActive = true
         buttonStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
         buttonStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-        buttonStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -28).isActive = true
+        buttonStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16).isActive = true
         setupFavoriteConstraints()
         setupRefreshConstraints()
         setupShareConstraints()
@@ -172,16 +172,33 @@ final class MehCard: UIView {
     @objc
     private func refresh(_ sender: UIButton) {
         delegate?.refreshTapped()
+        flipCard()
     }
 
     @objc
     private func favourite(_ sender: UIButton) {
         delegate?.favoriteTapped()
+        jumpCard()
     }
 
     @objc
     private func share(_ sender: UIButton) {
         delegate?.shareTapped()
+    }
+
+    private func flipCard() {
+        UIView.transition(with: containerView, duration: 1, options: .transitionFlipFromRight, animations: nil)
+    }
+
+    private func jumpCard() {
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
+            self.containerView.bounds.origin.y += 20
+        }) { _ in
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
+                self.containerView.bounds.origin.y -= 20
+            })
+        }
+
     }
 
 
