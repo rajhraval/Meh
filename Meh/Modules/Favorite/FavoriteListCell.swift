@@ -11,25 +11,100 @@ class FavoriteListCell: UICollectionViewCell {
 
     var deleteAction: (() -> Void)?
 
+    private let colors: [UIColor] = [.systemRed, .systemOrange, .systemYellow, .systemGreen, .systemBlue, .systemPink, .systemPink, .systemPurple, .systemTeal, .systemMint, .systemIndigo]
+
     private var containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemYellow
+        view.backgroundColor = .systemOrange
         return view
     }()
 
-    private var titleLabel: UILabel = {
+    private var primaryStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 18
+        stackView.distribution = .fill
+        stackView.alignment = .leading
+        return stackView
+    }()
+
+    private var labelsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 4
+        stackView.distribution = .fill
+        stackView.alignment = .leading
+        return stackView
+    }()
+
+    private var participantsView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
+    }()
+
+    private var participantLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.font = .systemFont(ofSize: 18)
+        label.text = "🙋‍♂️"
+        label.font = .p
         return label
     }()
 
-    private var deleteButton: UIButton = {
-        let button = UIButton(type: .system)
+    private var priceView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
+    }()
+
+    private var priceLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "💸"
+        label.font = .p
+        return label
+    }()
+
+    private var infoCTAStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 8
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        return stackView
+    }()
+
+    private var activityLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.font = .pLarge
+        label.textColor = .white
+        return label
+    }()
+
+    private var categoryLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.font = .pTiny
+        label.textColor = .white.withAlphaComponent(0.6)
+        return label
+    }()
+
+    private var linkButton: MehButton = {
+        let button = MehButton(style: .icon)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "trash.fill"), for: .normal)
+        button.image = UIImage(systemName: "link")!
+        return button
+    }()
+
+    private var optionsButton: MehButton = {
+        let button = MehButton(style: .icon)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.image = UIImage(systemName: "ellipsis.circle.fill")!
         return button
     }()
 
@@ -44,43 +119,72 @@ class FavoriteListCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        titleLabel.text = nil
+        activityLabel.text = nil
+        categoryLabel.text = nil
     }
 
     private func setup() {
         setupView()
-        setupLabel()
-        setupDeleteButton()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        containerView.cornerRadius()
+        [priceView, participantsView].forEach { $0.cornerRadius(8) }
     }
 
     private func setupView() {
+        setupContainerView()
+    }
+
+    private func setupContainerView() {
         contentView.addSubview(containerView)
-        containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        containerView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        containerView.pinToTopBottomLeadingTrailingEdgesWithConstant()
+        setupStackView()
     }
 
-    private func setupLabel() {
-        containerView.addSubview(titleLabel)
-        containerView.addSubview(deleteButton)
-        titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: deleteButton.leadingAnchor, constant: -16).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+    private func setupStackView() {
+        containerView.addSubview(primaryStackView)
+        primaryStackView.pinToTopBottomLeadingTrailingEdgesWithConstant(22)
+        primaryStackView.addArrangedSubviews(labelsStackView, infoCTAStackView)
+        labelsStackView.addArrangedSubviews(categoryLabel, activityLabel)
+        let spacer = UIView.createSpacerView()
+        infoCTAStackView.addArrangedSubviews(participantsView, priceView, spacer, linkButton, optionsButton)
+        setupInfoStackConstraints()
     }
 
-    private func setupDeleteButton() {
-        deleteButton.addTarget(self, action: #selector(deleteItem), for: .touchUpInside)
-        deleteButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16).isActive = true
-        deleteButton.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+    private func setupInfoStackConstraints() {
+        participantsView.addSubview(participantLabel)
+        participantLabel.pinToTopBottomLeadingTrailingEdgesWithConstants(verticalConstant: 5, horizontalConstant: 10)
+
+
+        priceView.addSubview(priceLabel)
+        priceLabel.pinToTopBottomLeadingTrailingEdgesWithConstants(verticalConstant: 5, horizontalConstant: 10)
+
+        linkButton.widthAnchor.constraint(equalToConstant: 28).isActive = true
+        optionsButton.widthAnchor.constraint(equalToConstant: 28).isActive = true
     }
 
     func configureCell(for item: MehItem) {
-        titleLabel.text = item.name
+        let color = colors.randomElement()!
+        containerView.backgroundColor = color
+        activityLabel.text = item.name
+        categoryLabel.text = item.type
+        priceLabel.text = item.money
+        participantLabel.text = item.emojis
+        configureIfYellow(color: color)
+    }
+
+    private func configureIfYellow(color: UIColor) {
+        guard color == .systemYellow else { return }
+        linkButton.foregroundColour = .black
+        optionsButton.foregroundColour = .black
+        activityLabel.textColor = .black
+        categoryLabel.textColor = .black.withAlphaComponent(0.6)
     }
 
     @objc
-    func deleteItem() {
+    private func deleteItem() {
         deleteAction?()
     }
 

@@ -13,6 +13,31 @@ final class FavoriteViewController: UIViewController {
 
     static let reuseIdentifier = "FavoriteListCell"
 
+    private var searchStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.spacing = 8
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        return stackView
+    }()
+
+    private var filterButton: MehButton = {
+        let button = MehButton(style: .symbol)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColour = .systemIndigo
+        button.image = UIImage(systemName: "line.3.horizontal.decrease.circle.fill")!
+        return button
+    }()
+
+    private var searchTextField: MehTextField = {
+        let textfield = MehTextField()
+        textfield.translatesAutoresizingMaskIntoConstraints = false
+        textfield.placeholder = "Search"
+        return textfield
+    }()
+
     private var favoriteCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, layout: .singleRow)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +72,18 @@ final class FavoriteViewController: UIViewController {
     }
 
     private func setupView() {
+        setupSearchField()
         setupCollectionView()
+    }
+
+    private func setupSearchField() {
+        view.addSubview(searchStackView)
+        searchStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        searchStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        searchStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
+        searchStackView.addArrangedSubviews(searchTextField, filterButton)
+        searchTextField.delegate = self
+        [searchTextField, filterButton].forEach { $0.heightAnchor.constraint(equalToConstant: 48).isActive = true }
     }
 
     private func setupCollectionView() {
@@ -57,7 +93,7 @@ final class FavoriteViewController: UIViewController {
         view.addSubview(favoriteCollectionView)
         favoriteCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         favoriteCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        favoriteCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        favoriteCollectionView.topAnchor.constraint(equalTo: searchStackView.bottomAnchor, constant: 16).isActive = true
         favoriteCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
@@ -104,5 +140,9 @@ extension FavoriteViewController: UICollectionViewDataSource {
 
 
 extension FavoriteViewController: UICollectionViewDelegate {
+
+}
+
+extension FavoriteViewController: UITextFieldDelegate {
 
 }

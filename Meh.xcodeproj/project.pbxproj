@@ -29,6 +29,8 @@
 		CF204FC12B6AA0CB0084E90C /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC02B6AA0CB0084E90C /* Decorator.swift */; };
 		CF204FC42B6AA7340084E90C /* MehCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC32B6AA7340084E90C /* MehCard.swift */; };
 		CF204FC82B6AACA00084E90C /* CAGradientLayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */; };
+		CF2F168F2B6E6C5700214DF5 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F168E2B6E6C5700214DF5 /* UIStackView+.swift */; };
+		CF2F16912B6E992500214DF5 /* MehTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F16902B6E992500214DF5 /* MehTextField.swift */; };
 		CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */; };
 		CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62D2B668EE000CA8F74 /* ActivityService.swift */; };
 		CF54C6312B668F0200CA8F74 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6302B668F0200CA8F74 /* APIError.swift */; };
@@ -78,6 +80,8 @@
 		CF204FC02B6AA0CB0084E90C /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		CF204FC32B6AA7340084E90C /* MehCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehCard.swift; sourceTree = "<group>"; };
 		CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+.swift"; sourceTree = "<group>"; };
+		CF2F168E2B6E6C5700214DF5 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		CF2F16902B6E992500214DF5 /* MehTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehTextField.swift; sourceTree = "<group>"; };
 		CF54C62A2B66743C00CA8F74 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		CF54C62D2B668EE000CA8F74 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		CF54C6302B668F0200CA8F74 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */,
 				CF204FBD2B6A7BE40084E90C /* MehButton.swift */,
 				CF204FC32B6AA7340084E90C /* MehCard.swift */,
+				CF2F16902B6E992500214DF5 /* MehTextField.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */,
 				CF5831542B6B435E00DA27F3 /* UIColor+.swift */,
 				CF13472E2B6CB2C5008E42E2 /* UIView+.swift */,
+				CF2F168E2B6E6C5700214DF5 /* UIStackView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +387,7 @@
 				CF197AE72B690B1B00F4AFE7 /* LayoutType.swift in Sources */,
 				CFB8A9482B6640F900E617C5 /* CoreDataStack.swift in Sources */,
 				CFB8A9442B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */,
+				CF2F168F2B6E6C5700214DF5 /* UIStackView+.swift in Sources */,
 				CF54C6382B66919000CA8F74 /* Activity.swift in Sources */,
 				CF197AD52B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */,
 				CF9DE1A52B6806E100CBE242 /* SettingsViewController.swift in Sources */,
@@ -404,6 +411,7 @@
 				CFB8A8E32B66238000E617C5 /* SceneDelegate.swift in Sources */,
 				CF13472F2B6CB2C5008E42E2 /* UIView+.swift in Sources */,
 				CF9DE1992B68047300CBE242 /* FavoriteViewModel.swift in Sources */,
+				CF2F16912B6E992500214DF5 /* MehTextField.swift in Sources */,
 				CF5831552B6B435E00DA27F3 /* UIColor+.swift in Sources */,
 				CFB8A8F52B66263500E617C5 /* Constants.swift in Sources */,
 				CF13472D2B6C9C4C008E42E2 /* CapsuleTabBar.swift in Sources */,

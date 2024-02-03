@@ -39,7 +39,7 @@ enum TabItem: String, CaseIterable {
     }
 
     var color: UIColor {
-        return .black.withAlphaComponent(0.1)
+        return .label.withAlphaComponent(0.1)
     }
 
     var tag: Int {

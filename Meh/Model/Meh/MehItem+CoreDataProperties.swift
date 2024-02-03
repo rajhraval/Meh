@@ -24,6 +24,35 @@ extension MehItem {
     @NSManaged public var participants: Int16
     @NSManaged public var type: String
 
+    var emojis: String {
+        let maxEmojisToShow = 4
+        let baseEmojis = ["🙋‍♂️", "🙋‍♀️"]
+        var result = ""
+        let quantity = Int(participants)
+
+        if quantity <= maxEmojisToShow {
+            result = String(repeating: baseEmojis[Int.random(in: 0..<baseEmojis.count)], count: quantity)
+        } else {
+            result = String(repeating: "🙋‍♂️🙋‍♀️", count: maxEmojisToShow) + " +\(quantity - maxEmojisToShow)"
+        }
+        return result
+    }
+
+    var money: String {
+        switch price {
+        case 0.1..<0.5:
+            return "💰"
+        case 0.5:
+            return "💰💰"
+        case 0.6...1.0:
+            return "💰💰💰"
+        case 0:
+            return "💸"
+        default:
+            return "🤷"
+        }
+    }
+
 }
 
 extension MehItem : Identifiable {
