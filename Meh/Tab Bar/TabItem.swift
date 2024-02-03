@@ -19,12 +19,27 @@ enum TabItem: String, CaseIterable {
     var image: UIImage {
         switch self {
         case .home:
-            return UIImage(systemName: "sparkles")!
+            return UIImage(systemName: "sparkles.rectangle.stack.fill")!
         case .settings:
             return UIImage(systemName: "gearshape.fill")!
         case .favorite:
-            return UIImage(systemName: "heart.text.square.fill")!
+            return UIImage(systemName: "heart.fill")!
         }
+    }
+
+    var selectedColor: UIColor {
+        switch self {
+        case .home:
+            return .systemOrange
+        case .settings:
+            return .systemBlue
+        case .favorite:
+            return .systemPink
+        }
+    }
+
+    var color: UIColor {
+        return .black.withAlphaComponent(0.1)
     }
 
     var tag: Int {

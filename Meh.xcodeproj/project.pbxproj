@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF13472D2B6C9C4C008E42E2 /* CapsuleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */; };
+		CF13472F2B6CB2C5008E42E2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472E2B6CB2C5008E42E2 /* UIView+.swift */; };
 		CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AC62B68EF7200F4AFE7 /* API.swift */; };
 		CF197AD32B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD12B68F61400F4AFE7 /* MehItem+CoreDataClass.swift */; };
 		CF197AD52B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AD22B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTabBar.swift; sourceTree = "<group>"; };
+		CF13472E2B6CB2C5008E42E2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		CF197AC62B68EF7200F4AFE7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		CF197AD12B68F61400F4AFE7 /* MehItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MehItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CF197AD22B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MehItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				CF204FB72B6A75E00084E90C /* UIFont+.swift */,
 				CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */,
 				CF5831542B6B435E00DA27F3 /* UIColor+.swift */,
+				CF13472E2B6CB2C5008E42E2 /* UIView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			children = (
 				CF9DE19D2B68051000CBE242 /* TabBarController.swift */,
 				CF9DE1A02B6805DE00CBE242 /* TabItem.swift */,
+				CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */,
 			);
 			path = "Tab Bar";
 			sourceTree = "<group>";
@@ -396,9 +402,11 @@
 				CFB8A91C2B662A0900E617C5 /* UserDefaults+.swift in Sources */,
 				CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */,
 				CFB8A8E32B66238000E617C5 /* SceneDelegate.swift in Sources */,
+				CF13472F2B6CB2C5008E42E2 /* UIView+.swift in Sources */,
 				CF9DE1992B68047300CBE242 /* FavoriteViewModel.swift in Sources */,
 				CF5831552B6B435E00DA27F3 /* UIColor+.swift in Sources */,
 				CFB8A8F52B66263500E617C5 /* Constants.swift in Sources */,
+				CF13472D2B6C9C4C008E42E2 /* CapsuleTabBar.swift in Sources */,
 				CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */,
 				CF204FB82B6A75E00084E90C /* UIFont+.swift in Sources */,
 				CF5831582B6B439B00DA27F3 /* GradientColor.swift in Sources */,
@@ -559,7 +567,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -593,7 +600,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
