@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0EA4112B70B3D600146C2A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */; };
 		CF13472D2B6C9C4C008E42E2 /* CapsuleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */; };
 		CF13472F2B6CB2C5008E42E2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472E2B6CB2C5008E42E2 /* UIView+.swift */; };
 		CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AC62B68EF7200F4AFE7 /* API.swift */; };
@@ -55,9 +56,12 @@
 		CFB8A9482B6640F900E617C5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A9472B6640F900E617C5 /* CoreDataStack.swift */; };
 		CFB8A94B2B66420F00E617C5 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A94A2B66420F00E617C5 /* URL+.swift */; };
 		CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A94D2B6643AF00E617C5 /* Logger.swift */; };
+		CFD409FE2B6F9AD900BC1A21 /* NSSortDescriptor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */; };
+		CFD40A002B6F9C2B00BC1A21 /* NSPredicate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTabBar.swift; sourceTree = "<group>"; };
 		CF13472E2B6CB2C5008E42E2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		CF197AC62B68EF7200F4AFE7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		CFB8A9472B6640F900E617C5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		CFB8A94A2B66420F00E617C5 /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
 		CFB8A94D2B6643AF00E617C5 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSortDescriptor+.swift"; sourceTree = "<group>"; };
+		CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 				CF204FBD2B6A7BE40084E90C /* MehButton.swift */,
 				CF204FC32B6AA7340084E90C /* MehCard.swift */,
 				CF2F16902B6E992500214DF5 /* MehTextField.swift */,
+				CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -178,6 +185,8 @@
 				CF5831542B6B435E00DA27F3 /* UIColor+.swift */,
 				CF13472E2B6CB2C5008E42E2 /* UIView+.swift */,
 				CF2F168E2B6E6C5700214DF5 /* UIStackView+.swift */,
+				CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */,
+				CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -390,6 +399,7 @@
 				CF2F168F2B6E6C5700214DF5 /* UIStackView+.swift in Sources */,
 				CF54C6382B66919000CA8F74 /* Activity.swift in Sources */,
 				CF197AD52B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */,
+				CF0EA4112B70B3D600146C2A /* EmptyStateView.swift in Sources */,
 				CF9DE1A52B6806E100CBE242 /* SettingsViewController.swift in Sources */,
 				CF204FBE2B6A7BE40084E90C /* MehButton.swift in Sources */,
 				CF9DE19E2B68051000CBE242 /* TabBarController.swift in Sources */,
@@ -422,7 +432,9 @@
 				CF204FC82B6AACA00084E90C /* CAGradientLayer+.swift in Sources */,
 				CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */,
 				CF9DE1A82B6806FF00CBE242 /* SettingsViewModel.swift in Sources */,
+				CFD40A002B6F9C2B00BC1A21 /* NSPredicate+.swift in Sources */,
 				CF197AF12B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */,
+				CFD409FE2B6F9AD900BC1A21 /* NSSortDescriptor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

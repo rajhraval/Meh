@@ -23,6 +23,14 @@ final class FavoriteViewController: UIViewController {
         return stackView
     }()
 
+    private var emptyStateView: EmptyStateView = {
+        let view = EmptyStateView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.title = "No Favorites?"
+        view.subtitle = "Time to add one :)"
+        return view
+    }()
+
     private var filterButton: MehButton = {
         let button = MehButton(style: .symbol)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +52,6 @@ final class FavoriteViewController: UIViewController {
         return collectionView
     }()
 
-    private var favorites: [MehItem] = []
     private var viewModel: FavoriteViewModel!
     private var cancellables: Set<AnyCancellable> = []
 
@@ -72,6 +79,7 @@ final class FavoriteViewController: UIViewController {
     }
 
     private func setupView() {
+        setupEmptyState()
         setupSearchField()
         setupCollectionView()
     }
@@ -84,6 +92,12 @@ final class FavoriteViewController: UIViewController {
         searchStackView.addArrangedSubviews(searchTextField, filterButton)
         searchTextField.delegate = self
         [searchTextField, filterButton].forEach { $0.heightAnchor.constraint(equalToConstant: 48).isActive = true }
+    }
+
+    private func setupEmptyState() {
+        emptyStateView.isHidden = true
+        view.addSubview(emptyStateView)
+        emptyStateView.centerInSuperview()
     }
 
     private func setupCollectionView() {
@@ -102,10 +116,30 @@ final class FavoriteViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] favoriteItems in
                 guard let self = self else { return }
-                favorites = favoriteItems
-                favoriteCollectionView.reloadData()
+                show(isEmpty: favoriteItems.isEmpty)
             }
             .store(in: &cancellables)
+        viewModel.$filteredFavorites
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] favoriteItems in
+                guard let self = self else { return }
+                show(isEmpty: favoriteItems.isEmpty, isFiltering: true)
+            }
+            .store(in: &cancellables)
+    }
+
+    private func show(isEmpty: Bool, isFiltering: Bool = false) {
+        if isEmpty {
+            if isFiltering {
+                emptyStateView.title = "No results found :("
+                emptyStateView.subtitle = "Maybe it might be something else."
+            }
+            emptyStateView.isHidden = false
+            favoriteCollectionView.isHidden = true
+        } else {
+            favoriteCollectionView.isHidden = false
+            favoriteCollectionView.reloadData()
+        }
     }
 
     @objc func refresh() {
@@ -122,10 +156,11 @@ final class FavoriteViewController: UIViewController {
 extension FavoriteViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return favorites.count
+        return viewModel.isSearching ? viewModel.filteredFavorites.count : viewModel.favorites.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let favorites = viewModel.isSearching ? viewModel.filteredFavorites : viewModel.favorites
         let favourite = favorites[indexPath.item]
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.reuseIdentifier, for: indexPath) as? FavoriteListCell else { fatalError("Cannot dequeue FavoriteListCell") }
         cell.configureCell(for: favourite)
@@ -144,5 +179,12 @@ extension FavoriteViewController: UICollectionViewDelegate {
 }
 
 extension FavoriteViewController: UITextFieldDelegate {
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        let searchText = (currentText as NSString).replacingCharacters(in: range, with: string)
+        viewModel.fetchFromSearch(searchText)
+        return true
+    }
 
 }

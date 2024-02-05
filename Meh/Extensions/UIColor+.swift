@@ -25,4 +25,25 @@ extension UIColor {
 
         self.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
+
+    static var randomColor: UIColor {
+        let colors: [UIColor] = [.systemRed, .systemOrange, .systemYellow, .systemGreen, .systemBlue, .systemPink, .systemPink, .systemPurple, .systemTeal, .systemMint, .systemIndigo]
+        return colors.randomElement()!
+    }
+
+    var hex: String {
+        guard let components = cgColor.components, components.count >= 3 else {
+            return "#000000" // Default to black if unable to get components
+        }
+
+        // Convert components to hex values
+        let red = Int(components[0] * 255)
+        let green = Int(components[1] * 255)
+        let blue = Int(components[2] * 255)
+
+        // Create the hex string
+        let hexString = String(format: "#%02X%02X%02X", red, green, blue)
+
+        return hexString
+    }
 }

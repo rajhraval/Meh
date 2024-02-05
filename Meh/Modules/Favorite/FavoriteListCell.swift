@@ -11,8 +11,6 @@ class FavoriteListCell: UICollectionViewCell {
 
     var deleteAction: (() -> Void)?
 
-    private let colors: [UIColor] = [.systemRed, .systemOrange, .systemYellow, .systemGreen, .systemBlue, .systemPink, .systemPink, .systemPurple, .systemTeal, .systemMint, .systemIndigo]
-
     private var containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -121,6 +119,7 @@ class FavoriteListCell: UICollectionViewCell {
         super.prepareForReuse()
         activityLabel.text = nil
         categoryLabel.text = nil
+        containerView.backgroundColor = nil
     }
 
     private func setup() {
@@ -166,21 +165,11 @@ class FavoriteListCell: UICollectionViewCell {
     }
 
     func configureCell(for item: MehItem) {
-        let color = colors.randomElement()!
-        containerView.backgroundColor = color
+        containerView.backgroundColor = UIColor(hex: item.color)
         activityLabel.text = item.name
         categoryLabel.text = item.type
         priceLabel.text = item.money
         participantLabel.text = item.emojis
-        configureIfYellow(color: color)
-    }
-
-    private func configureIfYellow(color: UIColor) {
-        guard color == .systemYellow else { return }
-        linkButton.foregroundColour = .black
-        optionsButton.foregroundColour = .black
-        activityLabel.textColor = .black
-        categoryLabel.textColor = .black.withAlphaComponent(0.6)
     }
 
     @objc

@@ -23,6 +23,7 @@ extension MehItem {
     @NSManaged public var accessibility: Double
     @NSManaged public var participants: Int16
     @NSManaged public var type: String
+    @NSManaged public var color: String
 
     var emojis: String {
         let maxEmojisToShow = 4
@@ -55,6 +56,14 @@ extension MehItem {
 
 }
 
-extension MehItem : Identifiable {
+extension MehItem: Identifiable {
 
+}
+
+extension MehItem {
+    static var alphabeticalFetch: NSFetchRequest<MehItem> {
+        let fetchRequest = MehItem.fetchRequest()
+        fetchRequest.sortDescriptors = [.sortDescriptor(\MehItem.name)]
+        return fetchRequest
+    }
 }

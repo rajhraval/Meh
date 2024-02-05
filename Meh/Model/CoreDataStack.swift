@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 final class CoreDataStack {
 
@@ -121,6 +122,7 @@ final class CoreDataStack {
         item.price = price
         item.accessibility = accessibility
         item.link = link
+        item.color = UIColor.randomColor.hex
         Log.message("Added a new Meh Item")
         saveChanges()
     }
