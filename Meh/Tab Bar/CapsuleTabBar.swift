@@ -29,7 +29,8 @@ final class CapsuleTabBar: UIView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
-        stackView.spacing = 24
+        stackView.spacing = 0
+        stackView.alignment = .fill
         stackView.distribution = .fillEqually
         return stackView
     }()
@@ -60,8 +61,8 @@ final class CapsuleTabBar: UIView {
         containerView.addSubview(buttonStackView)
         buttonStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 12).isActive = true
         buttonStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -12).isActive = true
-        buttonStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24).isActive = true
-        buttonStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -24).isActive = true
+        buttonStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16).isActive = true
+        buttonStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16).isActive = true
     }
 
     func selectItem(_ index: Int) {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF0EA4112B70B3D600146C2A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */; };
 		CF0EA4152B70E8AF00146C2A /* ShareableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4142B70E8AF00146C2A /* ShareableImage.swift */; };
+		CF0EA4172B71120200146C2A /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4162B71120200146C2A /* ShareViewController.swift */; };
 		CF13472D2B6C9C4C008E42E2 /* CapsuleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */; };
 		CF13472F2B6CB2C5008E42E2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472E2B6CB2C5008E42E2 /* UIView+.swift */; };
 		CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AC62B68EF7200F4AFE7 /* API.swift */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		CF0EA4142B70E8AF00146C2A /* ShareableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareableImage.swift; sourceTree = "<group>"; };
+		CF0EA4162B71120200146C2A /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTabBar.swift; sourceTree = "<group>"; };
 		CF13472E2B6CB2C5008E42E2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		CF197AC62B68EF7200F4AFE7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF0EA4182B71120700146C2A /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EA4162B71120200146C2A /* ShareViewController.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		CF197AC92B68F04000F4AFE7 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +237,7 @@
 				CF9DE1AA2B68070200CBE242 /* Settings */,
 				CF5DAC5B2B66AFA500F90A25 /* Home */,
 				CF9DE19B2B68047800CBE242 /* Favorite */,
+				CF0EA4182B71120700146C2A /* Share */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -430,6 +441,7 @@
 				CFB8A8F52B66263500E617C5 /* Constants.swift in Sources */,
 				CF13472D2B6C9C4C008E42E2 /* CapsuleTabBar.swift in Sources */,
 				CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */,
+				CF0EA4172B71120200146C2A /* ShareViewController.swift in Sources */,
 				CF204FB82B6A75E00084E90C /* UIFont+.swift in Sources */,
 				CF5831582B6B439B00DA27F3 /* GradientColor.swift in Sources */,
 				CF204FC42B6AA7340084E90C /* MehCard.swift in Sources */,

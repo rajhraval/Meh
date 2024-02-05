@@ -26,4 +26,14 @@ struct Activity: Identifiable, Codable {
         case type, participants, accessibility, price
         case link
     }
+
+    init(from item: MehItem) {
+        id = item.id
+        name = item.name
+        type = item.type
+        participants = Int(item.participants)
+        price = item.price
+        accessibility = item.accessibility
+        link = item.link
+    }
 }

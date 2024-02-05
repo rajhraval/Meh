@@ -123,7 +123,7 @@ final class FavoriteViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] favoriteItems in
                 guard let self = self else { return }
-                show(isEmpty: favoriteItems.isEmpty, isFiltering: true)
+                show(isEmpty: favoriteItems.isEmpty, isFiltering: viewModel.isSearching)
             }
             .store(in: &cancellables)
     }
@@ -166,9 +166,23 @@ extension FavoriteViewController: UICollectionViewDataSource {
         cell.configureCell(for: favourite)
         cell.deleteAction = { [weak self] in
             guard let self = self else { return }
-            viewModel.deleteFavorite(favourite)
+            UIView.animate(withDuration: 0.6) {
+                cell.alpha = 0
+            } completion: { _ in
+                self.viewModel.deleteFavorite(favourite)
+            }
+        }
+        cell.shareAction = { [weak self] in
+            guard let self = self else { return }
+            shareImage(for: favourite)
         }
         return cell
+    }
+
+    private func shareImage(for item: MehItem) {
+        let vc = ShareViewController(item: item)
+        let navigationController = UINavigationController(rootViewController: vc)
+        present(navigationController, animated: true)
     }
 
 }

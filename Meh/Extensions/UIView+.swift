@@ -145,4 +145,14 @@ extension UIView {
         }
     }
 
+    func imageFromView(_ view: UIView) -> UIImage? {
+        let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
+
+        let image = renderer.image { _ in
+            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        }
+
+        return image
+    }
+
 }

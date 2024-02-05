@@ -10,6 +10,7 @@ import UIKit
 class FavoriteListCell: UICollectionViewCell {
 
     var deleteAction: (() -> Void)?
+    var shareAction: (() -> Void)?
 
     private var containerView: UIView = {
         let view = UIView()
@@ -162,6 +163,20 @@ class FavoriteListCell: UICollectionViewCell {
 
         linkButton.widthAnchor.constraint(equalToConstant: 28).isActive = true
         optionsButton.widthAnchor.constraint(equalToConstant: 28).isActive = true
+        setupOptionButton()
+    }
+
+    private func setupOptionButton() {
+        let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash.fill"), attributes: .destructive) { [weak self] _ in
+            guard let self = self else { return }
+            delete()
+        }
+        let shareAction = UIAction(title: "Share", image: UIImage(systemName: "square.and.arrow.up")) { [weak self] _ in
+            guard let self = self else { return }
+            share()
+        }
+        optionsButton.showsMenuAsPrimaryAction = true
+        optionsButton.menu = UIMenu(children: [deleteAction, shareAction])
     }
 
     func configureCell(for item: MehItem) {
@@ -170,12 +185,17 @@ class FavoriteListCell: UICollectionViewCell {
         categoryLabel.text = item.type
         priceLabel.text = item.money
         participantLabel.text = item.emojis
+        if item.link.isEmpty {
+            linkButton.isHidden = true
+        }
     }
 
-    @objc
-    private func deleteItem() {
+    private func delete() {
         deleteAction?()
     }
 
+    private func share() {
+        shareAction?()
+    }
 
 }
