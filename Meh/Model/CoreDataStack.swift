@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 final class CoreDataStack {
 
@@ -102,6 +103,34 @@ final class CoreDataStack {
                 Log.error(error)
             }
         }
+    }
+
+    func addMehItem(
+        id: String,
+        name: String,
+        type: String,
+        participants: Int,
+        price: Double,
+        accessibility: Double,
+        link: String,
+        color: UIColor
+    ) {
+        let item = MehItem(context: viewContext)
+        item.id = id
+        item.name = name
+        item.type = type
+        item.participants = Int16(participants)
+        item.price = price
+        item.accessibility = accessibility
+        item.link = link
+        item.color = color.hex
+        Log.message("Added a new Meh Item")
+        saveChanges()
+    }
+
+    func delete<T: NSManagedObject>(_ item: T) {
+        viewContext.delete(item)
+        saveChanges()
     }
 
 }
