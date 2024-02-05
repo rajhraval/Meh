@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import UIKit.UIColor
 
 enum LoadingState {
     case idle
@@ -56,7 +57,7 @@ final class HomeViewModel: ObservableObject {
         }
     }
 
-    func addActivity(_ activity: Activity) {
+    func addActivity(_ activity: Activity, with color: UIColor) {
         CoreDataStack.shared.addMehItem(
             id: activity.id,
             name: activity.name,
@@ -64,7 +65,8 @@ final class HomeViewModel: ObservableObject {
             participants: Int(activity.participants),
             price: activity.price,
             accessibility: activity.accessibility,
-            link: activity.link
+            link: activity.link,
+            color: color
         )
         NotificationCenter.default.post(name: .addActivity, object: nil)
     }

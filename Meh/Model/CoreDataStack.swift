@@ -112,7 +112,8 @@ final class CoreDataStack {
         participants: Int,
         price: Double,
         accessibility: Double,
-        link: String
+        link: String,
+        color: UIColor
     ) {
         let item = MehItem(context: viewContext)
         item.id = id
@@ -122,7 +123,7 @@ final class CoreDataStack {
         item.price = price
         item.accessibility = accessibility
         item.link = link
-        item.color = UIColor.randomColor.hex
+        item.color = color.hex
         Log.message("Added a new Meh Item")
         saveChanges()
     }

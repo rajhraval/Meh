@@ -51,6 +51,12 @@ final class MehCard: UIView {
         }
     }
 
+    var cardColor: UIColor = UIColor.randomColor {
+        didSet {
+            setupView()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -62,7 +68,7 @@ final class MehCard: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        containerView.backgroundColor = UIColor.randomColor
+        containerView.backgroundColor = cardColor
         containerView.cornerRadius(20)
     }
 
@@ -98,7 +104,8 @@ final class MehCard: UIView {
     }
     
     func flipCard() {
-        UIView.transition(with: self, duration: 0.3, options: .transitionFlipFromRight, animations: nil)
+        cardColor = .randomColor
+        UIView.transition(with: self, duration: 0.6, options: .transitionFlipFromRight, animations: nil)
     }
 
     func jumpCard() {

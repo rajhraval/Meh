@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF0EA4112B70B3D600146C2A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */; };
+		CF0EA4152B70E8AF00146C2A /* ShareableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4142B70E8AF00146C2A /* ShareableImage.swift */; };
 		CF13472D2B6C9C4C008E42E2 /* CapsuleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */; };
 		CF13472F2B6CB2C5008E42E2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472E2B6CB2C5008E42E2 /* UIView+.swift */; };
 		CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AC62B68EF7200F4AFE7 /* API.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		CF0EA4142B70E8AF00146C2A /* ShareableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareableImage.swift; sourceTree = "<group>"; };
 		CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTabBar.swift; sourceTree = "<group>"; };
 		CF13472E2B6CB2C5008E42E2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		CF197AC62B68EF7200F4AFE7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				CF204FBA2B6A75F70084E90C /* FontHelper.swift */,
 				CF204FC02B6AA0CB0084E90C /* Decorator.swift */,
 				CF5831572B6B439B00DA27F3 /* GradientColor.swift */,
+				CF0EA4142B70E8AF00146C2A /* ShareableImage.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				CF0EA4112B70B3D600146C2A /* EmptyStateView.swift in Sources */,
 				CF9DE1A52B6806E100CBE242 /* SettingsViewController.swift in Sources */,
 				CF204FBE2B6A7BE40084E90C /* MehButton.swift in Sources */,
+				CF0EA4152B70E8AF00146C2A /* ShareableImage.swift in Sources */,
 				CF9DE19E2B68051000CBE242 /* TabBarController.swift in Sources */,
 				CFB8A8E52B66238000E617C5 /* HomeViewController.swift in Sources */,
 				CF204FBB2B6A75F70084E90C /* FontHelper.swift in Sources */,
@@ -582,6 +586,8 @@
 				DEVELOPMENT_TEAM = SJ64B32FPH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Meh/Config/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To save an activity you would like to do.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To save activity card to share with someone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -615,6 +621,8 @@
 				DEVELOPMENT_TEAM = SJ64B32FPH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Meh/Config/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To save an activity you would like to do.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To save activity card to share with someone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

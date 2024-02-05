@@ -89,9 +89,9 @@ final class FavoriteViewController: UIViewController {
         searchStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         searchStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         searchStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
-        searchStackView.addArrangedSubviews(searchTextField, filterButton)
+        searchStackView.addArrangedSubviews(searchTextField)
         searchTextField.delegate = self
-        [searchTextField, filterButton].forEach { $0.heightAnchor.constraint(equalToConstant: 48).isActive = true }
+        [searchTextField].forEach { $0.heightAnchor.constraint(equalToConstant: 48).isActive = true }
     }
 
     private func setupEmptyState() {

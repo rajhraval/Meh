@@ -22,7 +22,7 @@ final class MehTextField: UITextField {
 
     private func setup() {
         font = .pSmall
-        backgroundColor = UIColor(hex: "EBEBF5").withAlphaComponent(0.6)
+        backgroundColor = .secondarySystemBackground
         cornerRadius(10)
     }
 
