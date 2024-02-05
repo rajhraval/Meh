@@ -7,48 +7,12 @@
 
 import UIKit
 
-protocol MehCardDelegate: AnyObject {
-    func refreshTapped()
-    func favoriteTapped()
-    func shareTapped()
-}
-
 final class MehCard: UIView {
 
     private var containerView: UIView = {
         let containerView = UIView()
         containerView.translatesAutoresizingMaskIntoConstraints = false
         return containerView
-    }()
-
-    private var buttonStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
-        stackView.spacing = 8
-        return stackView
-    }()
-
-    private var refreshButton: MehButton = {
-        let refreshButton = MehButton(style: .label)
-        refreshButton.translatesAutoresizingMaskIntoConstraints = false
-        refreshButton.title = "Meh"
-        return refreshButton
-    }()
-
-    private var favoriteButton: MehButton = {
-        let favoriteButton = MehButton(style: .icon)
-        favoriteButton.translatesAutoresizingMaskIntoConstraints = false
-        favoriteButton.image = UIImage(systemName: "heart.fill")!
-        return favoriteButton
-    }()
-
-    private var shareButton: MehButton = {
-        let shareButton = MehButton(style: .icon)
-        shareButton.translatesAutoresizingMaskIntoConstraints = false
-        shareButton.image = UIImage(systemName: "square.and.arrow.up")!
-        return shareButton
     }()
 
     private var activityLabel: UILabel = {
@@ -81,8 +45,6 @@ final class MehCard: UIView {
         }
     }
 
-    weak var delegate: MehCardDelegate?
-
     var activity: Activity? {
         didSet {
             setupView()
@@ -100,15 +62,8 @@ final class MehCard: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        setupGradient()
-    }
-
-    private func setupGradient() {
-        containerView.layer.sublayers?.filter { $0 is CAGradientLayer }.forEach { $0.removeFromSuperlayer() }
-        randomGradient = CAGradientLayer.createRandomGradientLayer(in: containerView.frame)
-        randomGradient.cornerRadius = 20
-        randomGradient.cornerCurve = .continuous
-        containerView.layer.insertSublayer(randomGradient, at: 0)
+        containerView.backgroundColor = UIColor.randomColor
+        containerView.cornerRadius(20)
     }
 
     private func setupView() {
@@ -139,63 +94,19 @@ final class MehCard: UIView {
         activityLabel.topAnchor.constraint(greaterThanOrEqualTo: promptLabel.bottomAnchor, constant: 28).isActive = true
         activityLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 28).isActive = true
         activityLabel.trailingAnchor.constraint(lessThanOrEqualTo: containerView.trailingAnchor, constant: -28).isActive = true
-        setupStackViewConstraints()
+        activityLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -28).isActive = true
+    }
+    
+    func flipCard() {
+        UIView.transition(with: self, duration: 0.3, options: .transitionFlipFromRight, animations: nil)
     }
 
-    private func setupStackViewConstraints() {
-        containerView.addSubview(buttonStackView)
-        buttonStackView.topAnchor.constraint(equalTo: activityLabel.bottomAnchor, constant: 28).isActive = true
-        buttonStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
-        buttonStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-        buttonStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16).isActive = true
-        setupFavoriteConstraints()
-        setupRefreshConstraints()
-        setupShareConstraints()
-    }
-
-    private func setupRefreshConstraints() {
-        refreshButton.addTarget(self, action: #selector(refresh), for: .touchUpInside)
-        buttonStackView.addArrangedSubview(refreshButton)
-    }
-
-    private func setupFavoriteConstraints() {
-        favoriteButton.addTarget(self, action: #selector(favourite), for: .touchUpInside)
-        buttonStackView.addArrangedSubview(favoriteButton)
-
-    }
-
-    private func setupShareConstraints() {
-        shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
-        buttonStackView.addArrangedSubview(shareButton)
-    }
-
-    @objc
-    private func refresh(_ sender: UIButton) {
-        delegate?.refreshTapped()
-        flipCard()
-    }
-
-    @objc
-    private func favourite(_ sender: UIButton) {
-        delegate?.favoriteTapped()
-        jumpCard()
-    }
-
-    @objc
-    private func share(_ sender: UIButton) {
-        delegate?.shareTapped()
-    }
-
-    private func flipCard() {
-        UIView.transition(with: containerView, duration: 1, options: .transitionFlipFromRight, animations: nil)
-    }
-
-    private func jumpCard() {
+    func jumpCard() {
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
-            self.containerView.bounds.origin.y += 20
+            self.bounds.origin.y += 20
         }) { _ in
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
-                self.containerView.bounds.origin.y -= 20
+                self.bounds.origin.y -= 20
             })
         }
 

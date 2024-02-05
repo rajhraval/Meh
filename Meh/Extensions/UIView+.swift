@@ -133,4 +133,9 @@ extension UIView {
         return spacerView
     }
 
+    func setWidthHeightConstraints(_ constant: CGFloat) {
+        widthAnchor.constraint(equalToConstant: constant).isActive = true
+        heightAnchor.constraint(equalToConstant: constant).isActive = true
+    }
+
 }

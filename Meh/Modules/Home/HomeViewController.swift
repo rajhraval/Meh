@@ -23,6 +23,38 @@ final class HomeViewController: UIViewController {
         return activityIndicator
     }()
 
+    private var buttonStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .center
+        stackView.spacing = 18
+        return stackView
+    }()
+
+    private var refreshButton: MehButton = {
+        let refreshButton = MehButton(style: .jumboText)
+        refreshButton.translatesAutoresizingMaskIntoConstraints = false
+        refreshButton.title = "Meh"
+        refreshButton.foregroundColour = .orange
+        return refreshButton
+    }()
+
+    private var favoriteButton: MehButton = {
+        let favoriteButton = MehButton(style: .jumboSymbol)
+        favoriteButton.translatesAutoresizingMaskIntoConstraints = false
+        favoriteButton.image = UIImage(systemName: "heart.fill")!
+        return favoriteButton
+    }()
+
+    private var shareButton: MehButton = {
+        let shareButton = MehButton(style: .jumboSymbol)
+        shareButton.translatesAutoresizingMaskIntoConstraints = false
+        shareButton.image = UIImage(systemName: "square.and.arrow.up")!
+        return shareButton
+    }()
+
     private var activity: Activity?
     private var viewModel: HomeViewModel!
     private var cancellables: Set<AnyCancellable> = []
@@ -78,25 +110,48 @@ final class HomeViewController: UIViewController {
     }
 
     private func setupBarButtons() {
-        let filterSymbol = UIImage(systemName: "slider.horizontal.3")
-        let addSymbol = UIImage(systemName: "plus.circle.fill")
+        let filterSymbol = UIImage(systemName: "line.3.horizontal.decrease.circle.fill")
 
         let filterButton = UIBarButtonItem(image: filterSymbol, style: .plain, target: self, action: #selector(openFilterBoard))
-        let addButton = UIBarButtonItem(image: addSymbol, style: .plain, target: self, action: #selector(addMehItem))
 
-        navigationItem.leftBarButtonItem = filterButton
-        navigationItem.rightBarButtonItem = addButton
+        navigationItem.rightBarButtonItem = filterButton
     }
 
     private func setupMehCardConstraints() {
         mehCard.isHidden = true
-        mehCard.delegate = self
         mehCard.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mehCard)
-        mehCard.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-        mehCard.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        setupStackViewConstraints()
+        mehCard.pinToLeadingAndTrailingEdgesWithConstant(16)
         mehCard.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18).isActive = true
-        mehCard.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24).isActive = true
+        mehCard.bottomAnchor.constraint(equalTo: buttonStackView.topAnchor, constant: -36).isActive = true
+    }
+
+    private func setupStackViewConstraints() {
+        view.addSubview(buttonStackView)
+        buttonStackView.pinToLeadingAndTrailingEdgesWithConstant(64)
+        buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -36).isActive = true
+        setupFavoriteConstraints()
+        setupRefreshConstraints()
+        setupShareConstraints()
+    }
+
+    private func setupRefreshConstraints() {
+        refreshButton.addTarget(self, action: #selector(refresh), for: .touchUpInside)
+        buttonStackView.addArrangedSubview(refreshButton)
+        refreshButton.setWidthHeightConstraints(96)
+    }
+
+    private func setupFavoriteConstraints() {
+        favoriteButton.addTarget(self, action: #selector(favourite), for: .touchUpInside)
+        buttonStackView.addArrangedSubview(favoriteButton)
+        favoriteButton.setWidthHeightConstraints(64)
+    }
+
+    private func setupShareConstraints() {
+        shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
+        buttonStackView.addArrangedSubview(shareButton)
+        shareButton.setWidthHeightConstraints(64)
     }
 
     private func setupLoaderConstraints() {
@@ -108,30 +163,27 @@ final class HomeViewController: UIViewController {
 
 }
 
-extension HomeViewController: MehCardDelegate {
+extension HomeViewController {
 
-    func refreshTapped() {
-        loader.startAnimating()
+    @objc
+    private func refresh(_ sender: UIButton) {
         viewModel.fetchActivity()
+        mehCard.flipCard()
     }
 
-    func favoriteTapped() {
-        guard let activity = activity else { return }
-        viewModel.addActivity(activity)
+    @objc
+    private func favourite(_ sender: UIButton) {
+        mehCard.jumpCard()
     }
 
-    func shareTapped() {
-
+    @objc
+    private func share(_ sender: UIButton) {
+        
     }
 
 }
 
 extension HomeViewController {
-
-    @objc
-    private func addMehItem() {
-
-    }
 
     @objc
     private func openFilterBoard() {
