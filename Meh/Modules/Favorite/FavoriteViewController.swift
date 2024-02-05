@@ -11,8 +11,6 @@ import UIKit
 
 final class FavoriteViewController: UIViewController {
 
-    static let reuseIdentifier = "FavoriteListCell"
-
     private var searchStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -101,7 +99,7 @@ final class FavoriteViewController: UIViewController {
     }
 
     private func setupCollectionView() {
-        favoriteCollectionView.register(FavoriteListCell.self, forCellWithReuseIdentifier: Self.reuseIdentifier)
+        favoriteCollectionView.register(FavoriteListCell.self, forCellWithReuseIdentifier: FavoriteListCell.reuseIdentifier)
         favoriteCollectionView.delegate = self
         favoriteCollectionView.dataSource = self
         view.addSubview(favoriteCollectionView)
@@ -162,7 +160,7 @@ extension FavoriteViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let favorites = viewModel.isSearching ? viewModel.filteredFavorites : viewModel.favorites
         let favourite = favorites[indexPath.item]
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.reuseIdentifier, for: indexPath) as? FavoriteListCell else { fatalError("Cannot dequeue FavoriteListCell") }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteListCell.reuseIdentifier, for: indexPath) as? FavoriteListCell else { fatalError("Cannot dequeue FavoriteListCell") }
         cell.configureCell(for: favourite)
         cell.deleteAction = { [weak self] in
             guard let self = self else { return }

@@ -9,6 +9,8 @@ import UIKit
 
 class FavoriteListCell: UICollectionViewCell {
 
+    static let reuseIdentifier = "FavoriteListCell"
+
     var deleteAction: (() -> Void)?
     var shareAction: (() -> Void)?
 

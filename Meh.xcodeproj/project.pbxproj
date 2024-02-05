@@ -10,6 +10,8 @@
 		CF0EA4112B70B3D600146C2A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */; };
 		CF0EA4152B70E8AF00146C2A /* ShareableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4142B70E8AF00146C2A /* ShareableImage.swift */; };
 		CF0EA4172B71120200146C2A /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4162B71120200146C2A /* ShareViewController.swift */; };
+		CF0EA41A2B711D4F00146C2A /* SettingsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4192B711D4F00146C2A /* SettingsListCell.swift */; };
+		CF0EA41C2B7120AC00146C2A /* MetaInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA41B2B7120AC00146C2A /* MetaInfoViewCell.swift */; };
 		CF13472D2B6C9C4C008E42E2 /* CapsuleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */; };
 		CF13472F2B6CB2C5008E42E2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13472E2B6CB2C5008E42E2 /* UIView+.swift */; };
 		CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF197AC62B68EF7200F4AFE7 /* API.swift */; };
@@ -60,12 +62,16 @@
 		CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A94D2B6643AF00E617C5 /* Logger.swift */; };
 		CFD409FE2B6F9AD900BC1A21 /* NSSortDescriptor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */; };
 		CFD40A002B6F9C2B00BC1A21 /* NSPredicate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */; };
+		CFDB8F1E2B7134CD007C5F98 /* SettingsHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB8F1D2B7134CD007C5F98 /* SettingsHeaderSection.swift */; };
+		CFDB8F202B713A75007C5F98 /* AboutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB8F1F2B713A75007C5F98 /* AboutItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		CF0EA4142B70E8AF00146C2A /* ShareableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareableImage.swift; sourceTree = "<group>"; };
 		CF0EA4162B71120200146C2A /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		CF0EA4192B711D4F00146C2A /* SettingsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListCell.swift; sourceTree = "<group>"; };
+		CF0EA41B2B7120AC00146C2A /* MetaInfoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaInfoViewCell.swift; sourceTree = "<group>"; };
 		CF13472C2B6C9C4C008E42E2 /* CapsuleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTabBar.swift; sourceTree = "<group>"; };
 		CF13472E2B6CB2C5008E42E2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		CF197AC62B68EF7200F4AFE7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -119,6 +125,8 @@
 		CFB8A94D2B6643AF00E617C5 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSortDescriptor+.swift"; sourceTree = "<group>"; };
 		CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+.swift"; sourceTree = "<group>"; };
+		CFDB8F1D2B7134CD007C5F98 /* SettingsHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderSection.swift; sourceTree = "<group>"; };
+		CFDB8F1F2B713A75007C5F98 /* AboutItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +265,9 @@
 			children = (
 				CF9DE1A42B6806E100CBE242 /* SettingsViewController.swift */,
 				CF9DE1A72B6806FF00CBE242 /* SettingsViewModel.swift */,
+				CF0EA4192B711D4F00146C2A /* SettingsListCell.swift */,
+				CF0EA41B2B7120AC00146C2A /* MetaInfoViewCell.swift */,
+				CFDB8F1D2B7134CD007C5F98 /* SettingsHeaderSection.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -326,6 +337,7 @@
 				CFB8A9422B6640D000E617C5 /* MehModel.xcdatamodeld */,
 				CFB8A9472B6640F900E617C5 /* CoreDataStack.swift */,
 				CF54C6372B66919000CA8F74 /* Activity.swift */,
+				CFDB8F1F2B713A75007C5F98 /* AboutItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,16 +430,20 @@
 				CF204FBE2B6A7BE40084E90C /* MehButton.swift in Sources */,
 				CF0EA4152B70E8AF00146C2A /* ShareableImage.swift in Sources */,
 				CF9DE19E2B68051000CBE242 /* TabBarController.swift in Sources */,
+				CF0EA41C2B7120AC00146C2A /* MetaInfoViewCell.swift in Sources */,
 				CFB8A8E52B66238000E617C5 /* HomeViewController.swift in Sources */,
 				CF204FBB2B6A75F70084E90C /* FontHelper.swift in Sources */,
 				CFB8A94B2B66420F00E617C5 /* URL+.swift in Sources */,
 				CF197AEB2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */,
+				CF0EA41A2B711D4F00146C2A /* SettingsListCell.swift in Sources */,
 				CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */,
+				CFDB8F1E2B7134CD007C5F98 /* SettingsHeaderSection.swift in Sources */,
 				CF197AF42B692B8500F4AFE7 /* Notification+.swift in Sources */,
 				CF9DE1962B68046400CBE242 /* FavoriteViewController.swift in Sources */,
 				CF197AD32B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */,
 				CF54C6312B668F0200CA8F74 /* APIError.swift in Sources */,
 				CF204FC12B6AA0CB0084E90C /* Decorator.swift in Sources */,
+				CFDB8F202B713A75007C5F98 /* AboutItem.swift in Sources */,
 				CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */,
 				CFB8A8E12B66238000E617C5 /* AppDelegate.swift in Sources */,
 				CF9DE1A12B6805DE00CBE242 /* TabItem.swift in Sources */,
