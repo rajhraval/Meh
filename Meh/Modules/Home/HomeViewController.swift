@@ -114,10 +114,11 @@ final class HomeViewController: UIViewController {
     private func setupView() {
         setupLoaderConstraints()
         setupMehCardConstraints()
-        //setupBarButtons()
+        setupBarButtons()
     }
 
     private func setupBarButtons() {
+        filterButton.addTarget(self, action: #selector(openFilterBoard), for: .touchUpInside)
         let filterButton = UIBarButtonItem(customView: filterButton)
         navigationItem.rightBarButtonItem = filterButton
     }
@@ -231,7 +232,9 @@ extension HomeViewController {
 
     @objc
     private func openFilterBoard() {
-
+        let vc = FilterViewController()
+        let navigationController = UINavigationController(rootViewController: vc)
+        present(navigationController, animated: true)
     }
 
 }

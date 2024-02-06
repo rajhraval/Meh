@@ -40,6 +40,8 @@
 		CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C62D2B668EE000CA8F74 /* ActivityService.swift */; };
 		CF54C6312B668F0200CA8F74 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6302B668F0200CA8F74 /* APIError.swift */; };
 		CF54C6382B66919000CA8F74 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54C6372B66919000CA8F74 /* Activity.swift */; };
+		CF5758BA2B71FA9D0033FC0F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5758B92B71FA9D0033FC0F /* FilterViewController.swift */; };
+		CF5758BD2B71FB020033FC0F /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5758BC2B71FB020033FC0F /* FilterViewModel.swift */; };
 		CF5831552B6B435E00DA27F3 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831542B6B435E00DA27F3 /* UIColor+.swift */; };
 		CF5831582B6B439B00DA27F3 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831572B6B439B00DA27F3 /* GradientColor.swift */; };
 		CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */; };
@@ -62,7 +64,7 @@
 		CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A94D2B6643AF00E617C5 /* Logger.swift */; };
 		CFD409FE2B6F9AD900BC1A21 /* NSSortDescriptor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */; };
 		CFD40A002B6F9C2B00BC1A21 /* NSPredicate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */; };
-		CFDB8F1E2B7134CD007C5F98 /* SettingsHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB8F1D2B7134CD007C5F98 /* SettingsHeaderSection.swift */; };
+		CFDB8F1E2B7134CD007C5F98 /* MehHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB8F1D2B7134CD007C5F98 /* MehHeaderSection.swift */; };
 		CFDB8F202B713A75007C5F98 /* AboutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB8F1F2B713A75007C5F98 /* AboutItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		CF54C62D2B668EE000CA8F74 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		CF54C6302B668F0200CA8F74 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		CF54C6372B66919000CA8F74 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		CF5758B92B71FA9D0033FC0F /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		CF5758BC2B71FB020033FC0F /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		CF5831542B6B435E00DA27F3 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		CF5831572B6B439B00DA27F3 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColor.swift; sourceTree = "<group>"; };
 		CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -125,7 +129,7 @@
 		CFB8A94D2B6643AF00E617C5 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSortDescriptor+.swift"; sourceTree = "<group>"; };
 		CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+.swift"; sourceTree = "<group>"; };
-		CFDB8F1D2B7134CD007C5F98 /* SettingsHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderSection.swift; sourceTree = "<group>"; };
+		CFDB8F1D2B7134CD007C5F98 /* MehHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehHeaderSection.swift; sourceTree = "<group>"; };
 		CFDB8F1F2B713A75007C5F98 /* AboutItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +174,7 @@
 		CF197AE92B690B4E00F4AFE7 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				CFDB8F1D2B7134CD007C5F98 /* MehHeaderSection.swift */,
 				CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */,
 				CF204FBD2B6A7BE40084E90C /* MehButton.swift */,
 				CF204FC32B6AA7340084E90C /* MehCard.swift */,
@@ -220,6 +225,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		CF5758BB2B71FAA00033FC0F /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				CF5758B92B71FA9D0033FC0F /* FilterViewController.swift */,
+				CF5758BC2B71FB020033FC0F /* FilterViewModel.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		CF5DAC5B2B66AFA500F90A25 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +260,7 @@
 				CF5DAC5B2B66AFA500F90A25 /* Home */,
 				CF9DE19B2B68047800CBE242 /* Favorite */,
 				CF0EA4182B71120700146C2A /* Share */,
+				CF5758BB2B71FAA00033FC0F /* Filter */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -267,7 +282,6 @@
 				CF9DE1A72B6806FF00CBE242 /* SettingsViewModel.swift */,
 				CF0EA4192B711D4F00146C2A /* SettingsListCell.swift */,
 				CF0EA41B2B7120AC00146C2A /* MetaInfoViewCell.swift */,
-				CFDB8F1D2B7134CD007C5F98 /* SettingsHeaderSection.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -421,11 +435,13 @@
 			files = (
 				CF197AE72B690B1B00F4AFE7 /* LayoutType.swift in Sources */,
 				CFB8A9482B6640F900E617C5 /* CoreDataStack.swift in Sources */,
+				CF5758BD2B71FB020033FC0F /* FilterViewModel.swift in Sources */,
 				CFB8A9442B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */,
 				CF2F168F2B6E6C5700214DF5 /* UIStackView+.swift in Sources */,
 				CF54C6382B66919000CA8F74 /* Activity.swift in Sources */,
 				CF197AD52B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */,
 				CF0EA4112B70B3D600146C2A /* EmptyStateView.swift in Sources */,
+				CF5758BA2B71FA9D0033FC0F /* FilterViewController.swift in Sources */,
 				CF9DE1A52B6806E100CBE242 /* SettingsViewController.swift in Sources */,
 				CF204FBE2B6A7BE40084E90C /* MehButton.swift in Sources */,
 				CF0EA4152B70E8AF00146C2A /* ShareableImage.swift in Sources */,
@@ -437,7 +453,7 @@
 				CF197AEB2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */,
 				CF0EA41A2B711D4F00146C2A /* SettingsListCell.swift in Sources */,
 				CF54C62E2B668EE000CA8F74 /* ActivityService.swift in Sources */,
-				CFDB8F1E2B7134CD007C5F98 /* SettingsHeaderSection.swift in Sources */,
+				CFDB8F1E2B7134CD007C5F98 /* MehHeaderSection.swift in Sources */,
 				CF197AF42B692B8500F4AFE7 /* Notification+.swift in Sources */,
 				CF9DE1962B68046400CBE242 /* FavoriteViewController.swift in Sources */,
 				CF197AD32B68F61400F4AFE7 /* MehItem+CoreDataClass.swift in Sources */,

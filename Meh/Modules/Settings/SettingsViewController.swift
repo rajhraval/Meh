@@ -40,8 +40,7 @@ final class SettingsViewController: UIViewController {
     }
 
     private func setupCollectionView() {
-        settingsCollectionView.register(SettingsHeaderSection.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SettingsHeaderSection.reuseIdentifier)
-
+        settingsCollectionView.register(MehHeaderSection.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MehHeaderSection.reuseIdentifier)
         settingsCollectionView.register(SettingsListCell.self, forCellWithReuseIdentifier: SettingsListCell.reuseIdentifier)
         settingsCollectionView.register(MetaInfoViewCell.self, forCellWithReuseIdentifier: MetaInfoViewCell.reuseIdentifier)
         settingsCollectionView.delegate = self
@@ -62,8 +61,8 @@ extension SettingsViewController: UICollectionViewDataSource {
         let section = viewModel.sections[indexPath.section]
         switch section {
         case .about, .meta:
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SettingsHeaderSection.reuseIdentifier, for: indexPath) as? SettingsHeaderSection else {
-                fatalError("Cannot dequeue SettingsHeaderSection")
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MehHeaderSection.reuseIdentifier, for: indexPath) as? MehHeaderSection else {
+                fatalError("Cannot dequeue MehHeaderSection")
             }
             header.configureHeader(for: section)
             return header
