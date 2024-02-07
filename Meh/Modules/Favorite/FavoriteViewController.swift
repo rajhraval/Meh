@@ -45,7 +45,7 @@ final class FavoriteViewController: UIViewController {
     }()
 
     private var favoriteCollectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, layout: .singleRow)
+        let collectionView = UICollectionView(frame: .zero, layout: .singleRowWithHeader(header: false))
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()

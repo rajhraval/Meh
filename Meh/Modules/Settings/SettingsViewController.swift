@@ -10,7 +10,7 @@ import UIKit
 final class SettingsViewController: UIViewController {
 
     private var settingsCollectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, layout: .headerWithRow)
+        let collectionView = UICollectionView(frame: .zero, layout: .singleRowWithHeader(header: true))
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()

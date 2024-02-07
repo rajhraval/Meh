@@ -9,11 +9,7 @@ import UIKit
 
 final class FilterViewController: UIViewController {
 
-    private var filterCollectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, layout: .headerWithRow)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        return collectionView
-    }()
+    private var filterCollectionView: UICollectionView!
 
     private var buttonStackView: UIStackView = {
         let stackView = UIStackView()
@@ -85,6 +81,8 @@ final class FilterViewController: UIViewController {
     }
 
     private func setupCollectionView() {
+        filterCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        filterCollectionView.register(CategoryItemCell.self, forCellWithReuseIdentifier: CategoryItemCell.reuseIdentifier)
         filterCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         filterCollectionView.register(MehHeaderSection.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MehHeaderSection.reuseIdentifier)
         filterCollectionView.delegate = self
@@ -92,6 +90,31 @@ final class FilterViewController: UIViewController {
         view.addSubview(filterCollectionView)
         filterCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         filterCollectionView.pinToLeadingAndTrailingEdgesWithConstant()
+    }
+
+    private func createLayout() -> UICollectionViewCompositionalLayout {
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+
+            guard let layoutType = FilterViewModel.FilterSection(rawValue: sectionIndex) else { return nil }
+
+            let itemSize = NSCollectionLayoutSize(widthDimension: layoutType.itemWidth, heightDimension: layoutType.itemHeight)
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 0)
+
+            let groupSize = NSCollectionLayoutSize(widthDimension: layoutType.groupWidth, heightDimension: layoutType.groupHeight)
+            let group = layoutType == .category ? NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item]) : NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+            group.interItemSpacing = .fixed(8)
+
+            let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44))
+            let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+
+            let section = NSCollectionLayoutSection(group: group)
+            section.interGroupSpacing = 8
+            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+            section.boundarySupplementaryItems = [header]
+            return section
+        }
+        return layout
     }
 
     private func setupButtonStackViewConstraints() {
@@ -128,12 +151,25 @@ extension FilterViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        let section = viewModel.sections[section]
+        return section.numberOfItems
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        return cell
+        let section = viewModel.sections[indexPath.section]
+        switch section {
+        case .category:
+            let item = CategoryItem.items[indexPath.item]
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryItemCell.reuseIdentifier, for: indexPath) as? CategoryItemCell else {
+                fatalError("Cannot dequeue CategoryItemCell")
+            }
+            cell.configureCell(for: item)
+            return cell
+        default:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+            return cell
+        }
+
     }
 
 }

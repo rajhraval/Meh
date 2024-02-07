@@ -18,13 +18,13 @@ enum LoadingState {
 final class HomeViewModel: ObservableObject {
 
     @Published var activity: Activity?
-    @Published var loadingState: LoadingState = .loading
+    @Published var loadingState: LoadingState = .idle
 
     private let activityService: ActivityService
 
     init(activityService: ActivityService = ActivityService()) {
         self.activityService = activityService
-        fetchActivity()
+        //fetchActivity()
     }
 
     func fetchActivity(

@@ -68,7 +68,7 @@ class MehHeaderSection: UICollectionReusableView {
         addSubview(containerView)
         containerView.pinToTopBottomLeadingTrailingEdgesWithConstants()
         containerView.addSubview(primaryStackView)
-        primaryStackView.pinToTopBottomLeadingTrailingEdgesWithConstants(verticalConstant: 8, horizontalConstant: 16)
+        primaryStackView.pinToTopBottomLeadingTrailingEdgesWithConstants(verticalConstant: 8)
         primaryStackView.addArrangedSubviews(label, subtitleLabel)
     }
 
@@ -79,7 +79,7 @@ class MehHeaderSection: UICollectionReusableView {
         }
     }
 
-    func configureFilterHeader(for section: FilterSection) {
+    func configureFilterHeader(for section: FilterViewModel.FilterSection) {
         label.text = section.title
         label.textColor = .label
         subtitleLabel.textColor = .secondaryLabel
