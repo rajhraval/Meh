@@ -29,18 +29,9 @@ class MehHeaderSection: UICollectionReusableView {
     private var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .pSmall
+        label.font = .pSmall()
         label.textAlignment = .left
         label.textColor = .secondaryLabel
-        label.numberOfLines = 0
-        return label
-    }()
-
-    private var subtitleLabel: UILabel = {
-        let label = UILabel()
-        label.font = .pTiny
-        label.textAlignment = .left
-        label.textColor = .tertiaryLabel
         label.numberOfLines = 0
         return label
     }()
@@ -57,7 +48,6 @@ class MehHeaderSection: UICollectionReusableView {
     override func prepareForReuse() {
         super.prepareForReuse()
         label.text = nil
-        subtitleLabel.text = nil
     }
 
     private func setup() {
@@ -67,23 +57,16 @@ class MehHeaderSection: UICollectionReusableView {
     private func setupView() {
         addSubview(containerView)
         containerView.pinToTopBottomLeadingTrailingEdgesWithConstants()
-        containerView.addSubview(primaryStackView)
-        primaryStackView.pinToTopBottomLeadingTrailingEdgesWithConstants(verticalConstant: 8)
-        primaryStackView.addArrangedSubviews(label, subtitleLabel)
+        containerView.addSubview(label)
+        label.pinToTopBottomLeadingTrailingEdgesWithConstants(verticalConstant: 8)
     }
 
     func configureHeader(for section: Section) {
-        subtitleLabel.isHidden = true
-        if section == .about {
-            label.text = section.title.uppercased()
-        }
+        label.text = section.title.uppercased()
     }
 
     func configureFilterHeader(for section: FilterViewModel.FilterSection) {
-        label.text = section.title
-        label.textColor = .label
-        subtitleLabel.textColor = .secondaryLabel
-        subtitleLabel.text = section.subtitle
+        label.text = section.title.uppercased()
     }
 
 }

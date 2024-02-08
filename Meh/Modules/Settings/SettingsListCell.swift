@@ -44,14 +44,14 @@ class SettingsListCell: UICollectionViewCell {
 
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .pSmall
+        label.font = .pSmall(isBold: true)
         label.textColor = .label
         label.numberOfLines = 0
         return label
     }()
 
     private var disclosure: UIImageView = {
-        let image = UIImage(systemName: "chevron.right")!.withConfiguration(UIImage.SymbolConfiguration(font: .pSmall))
+        let image = UIImage(systemName: "chevron.right")!.withConfiguration(UIImage.SymbolConfiguration(font: .pSmall(isBold: true)))
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .systemGray

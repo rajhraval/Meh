@@ -83,7 +83,7 @@ final class FilterViewController: UIViewController {
     private func setupCollectionView() {
         filterCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         filterCollectionView.register(CategoryItemCell.self, forCellWithReuseIdentifier: CategoryItemCell.reuseIdentifier)
-        filterCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        filterCollectionView.register(MehSliderCell.self, forCellWithReuseIdentifier: MehSliderCell.reuseIdentifier)
         filterCollectionView.register(MehHeaderSection.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MehHeaderSection.reuseIdentifier)
         filterCollectionView.delegate = self
         filterCollectionView.dataSource = self
@@ -99,7 +99,9 @@ final class FilterViewController: UIViewController {
 
             let itemSize = NSCollectionLayoutSize(widthDimension: layoutType.itemWidth, heightDimension: layoutType.itemHeight)
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            item.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 0)
+            if layoutType == .category {
+                item.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 0)
+            }
 
             let groupSize = NSCollectionLayoutSize(widthDimension: layoutType.groupWidth, heightDimension: layoutType.groupHeight)
             let group = layoutType == .category ? NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item]) : NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
@@ -166,7 +168,9 @@ extension FilterViewController: UICollectionViewDataSource {
             cell.configureCell(for: item)
             return cell
         default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MehSliderCell.reuseIdentifier, for: indexPath) as? MehSliderCell else {
+                fatalError("Cannot dequeue CategoryItemCell")
+            }
             return cell
         }
 

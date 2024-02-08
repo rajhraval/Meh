@@ -21,7 +21,7 @@ final class MehTextField: UITextField {
     }
 
     private func setup() {
-        font = .pSmall
+        font = .pSmall(isBold: true)
         backgroundColor = .secondarySystemBackground
         cornerRadius(10)
     }

@@ -30,7 +30,7 @@ final class EmptyStateView: UIView {
 
     private var subtitleLabel: UILabel = {
         let label = UILabel()
-        label.font = .pSmall
+        label.font = .pSmall(isBold: true)
         label.textColor = .secondaryLabel
         label.textAlignment = .center
         label.numberOfLines = 0

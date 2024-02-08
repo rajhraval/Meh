@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "availablehapticfeedback",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yonat/AvailableHapticFeedback",
+      "state" : {
+        "revision" : "9b2e0d85b532333bcb026b850052575852659d18",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "multislider",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yonat/MultiSlider",
+      "state" : {
+        "revision" : "ce55c0ec06e5fcde1dd8ad9791bd74ccfe4c4032",
+        "version" : "2.1.2"
+      }
+    },
+    {
+      "identity" : "sweeterswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yonat/SweeterSwift",
+      "state" : {
+        "revision" : "aff918fc4e8cba40c51b1df99766594e3acc4eb1",
+        "version" : "1.2.3"
+      }
+    }
+  ],
+  "version" : 2
+}

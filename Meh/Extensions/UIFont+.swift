@@ -26,7 +26,7 @@ extension UIFont {
     /// Bold, 18
     static var p = customFont(weight: .bold, size: .p)
     /// Bold, 16
-    static var pSmall = customFont(weight: .bold, size: .pSmall)
+    static func pSmall(isBold: Bool = false) -> UIFont { customFont(weight: isBold ? .bold : .semiBold, size: .pSmall) }
     /// Bold, 12
     static var pTiny = customFont(weight: .bold, size: .pSmall)
     /// Heavy, 18

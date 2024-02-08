@@ -73,7 +73,7 @@ extension FilterViewModel {
             case .category:
                 return  .absolute(44)
             default:
-                return .fractionalHeight(1)
+                return .estimated(100)
             }
         }
 

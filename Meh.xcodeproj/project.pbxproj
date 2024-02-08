@@ -34,6 +34,9 @@
 		CF204FC12B6AA0CB0084E90C /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC02B6AA0CB0084E90C /* Decorator.swift */; };
 		CF204FC42B6AA7340084E90C /* MehCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC32B6AA7340084E90C /* MehCard.swift */; };
 		CF204FC82B6AACA00084E90C /* CAGradientLayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */; };
+		CF236FB72B73C2270082FA2E /* MehSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF236FB62B73C2270082FA2E /* MehSliderCell.swift */; };
+		CF236FBC2B73E6380082FA2E /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF236FBB2B73E6380082FA2E /* UIScreen+.swift */; };
+		CF236FBE2B73E6400082FA2E /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF236FBD2B73E6400082FA2E /* UIWindow+.swift */; };
 		CF2DC9592B7355DA00D4A017 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2DC9582B7355DA00D4A017 /* CategoryItem.swift */; };
 		CF2F168F2B6E6C5700214DF5 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F168E2B6E6C5700214DF5 /* UIStackView+.swift */; };
 		CF2F16912B6E992500214DF5 /* MehTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F16902B6E992500214DF5 /* MehTextField.swift */; };
@@ -47,6 +50,7 @@
 		CF5831552B6B435E00DA27F3 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831542B6B435E00DA27F3 /* UIColor+.swift */; };
 		CF5831582B6B439B00DA27F3 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5831572B6B439B00DA27F3 /* GradientColor.swift */; };
 		CF5DAC592B66AF8F00F90A25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DAC582B66AF8F00F90A25 /* HomeViewModel.swift */; };
+		CF7FA5DA2B74A7490083C22D /* MultiSlider in Frameworks */ = {isa = PBXBuildFile; productRef = CF7FA5D92B74A7490083C22D /* MultiSlider */; };
 		CF9DE1962B68046400CBE242 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1952B68046400CBE242 /* FavoriteViewController.swift */; };
 		CF9DE1992B68047300CBE242 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE1982B68047300CBE242 /* FavoriteViewModel.swift */; };
 		CF9DE19E2B68051000CBE242 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE19D2B68051000CBE242 /* TabBarController.swift */; };
@@ -98,6 +102,9 @@
 		CF204FC02B6AA0CB0084E90C /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		CF204FC32B6AA7340084E90C /* MehCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehCard.swift; sourceTree = "<group>"; };
 		CF204FC72B6AACA00084E90C /* CAGradientLayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+.swift"; sourceTree = "<group>"; };
+		CF236FB62B73C2270082FA2E /* MehSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehSliderCell.swift; sourceTree = "<group>"; };
+		CF236FBB2B73E6380082FA2E /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
+		CF236FBD2B73E6400082FA2E /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		CF2DC9582B7355DA00D4A017 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		CF2F168E2B6E6C5700214DF5 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		CF2F16902B6E992500214DF5 /* MehTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehTextField.swift; sourceTree = "<group>"; };
@@ -142,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7FA5DA2B74A7490083C22D /* MultiSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +186,7 @@
 		CF197AE92B690B4E00F4AFE7 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				CF236FB62B73C2270082FA2E /* MehSliderCell.swift */,
 				CFDB8F1D2B7134CD007C5F98 /* MehHeaderSection.swift */,
 				CF197AE62B690B1B00F4AFE7 /* LayoutType.swift */,
 				CF204FBD2B6A7BE40084E90C /* MehButton.swift */,
@@ -216,6 +225,8 @@
 				CF2F168E2B6E6C5700214DF5 /* UIStackView+.swift */,
 				CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */,
 				CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */,
+				CF236FBB2B73E6380082FA2E /* UIScreen+.swift */,
+				CF236FBD2B73E6400082FA2E /* UIWindow+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,6 +397,9 @@
 			dependencies = (
 			);
 			name = Meh;
+			packageProductDependencies = (
+				CF7FA5D92B74A7490083C22D /* MultiSlider */,
+			);
 			productName = Meh;
 			productReference = CFB8A8DD2B66238000E617C5 /* Meh.app */;
 			productType = "com.apple.product-type.application";
@@ -414,6 +428,9 @@
 				Base,
 			);
 			mainGroup = CFB8A8D42B66238000E617C5;
+			packageReferences = (
+				CF7FA5D82B74A7490083C22D /* XCRemoteSwiftPackageReference "MultiSlider" */,
+			);
 			productRefGroup = CFB8A8DE2B66238000E617C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -461,6 +478,7 @@
 				CF0EA4152B70E8AF00146C2A /* ShareableImage.swift in Sources */,
 				CF9DE19E2B68051000CBE242 /* TabBarController.swift in Sources */,
 				CF0EA41C2B7120AC00146C2A /* MetaInfoViewCell.swift in Sources */,
+				CF236FBE2B73E6400082FA2E /* UIWindow+.swift in Sources */,
 				CF5758C12B7206680033FC0F /* CategoryItemCell.swift in Sources */,
 				CFB8A8E52B66238000E617C5 /* HomeViewController.swift in Sources */,
 				CF204FBB2B6A75F70084E90C /* FontHelper.swift in Sources */,
@@ -478,6 +496,7 @@
 				CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */,
 				CFB8A8E12B66238000E617C5 /* AppDelegate.swift in Sources */,
 				CF9DE1A12B6805DE00CBE242 /* TabItem.swift in Sources */,
+				CF236FB72B73C2270082FA2E /* MehSliderCell.swift in Sources */,
 				CFB8A91C2B662A0900E617C5 /* UserDefaults+.swift in Sources */,
 				CF197AC72B68EF7200F4AFE7 /* API.swift in Sources */,
 				CFB8A8E32B66238000E617C5 /* SceneDelegate.swift in Sources */,
@@ -495,6 +514,7 @@
 				CF204FC42B6AA7340084E90C /* MehCard.swift in Sources */,
 				CF204FC82B6AACA00084E90C /* CAGradientLayer+.swift in Sources */,
 				CF54C62B2B66743C00CA8F74 /* APIEndpoint.swift in Sources */,
+				CF236FBC2B73E6380082FA2E /* UIScreen+.swift in Sources */,
 				CF9DE1A82B6806FF00CBE242 /* SettingsViewModel.swift in Sources */,
 				CFD40A002B6F9C2B00BC1A21 /* NSPredicate+.swift in Sources */,
 				CF197AF12B690D4D00F4AFE7 /* FavoriteListCell.swift in Sources */,
@@ -727,6 +747,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF7FA5D82B74A7490083C22D /* XCRemoteSwiftPackageReference "MultiSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yonat/MultiSlider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF7FA5D92B74A7490083C22D /* MultiSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF7FA5D82B74A7490083C22D /* XCRemoteSwiftPackageReference "MultiSlider" */;
+			productName = MultiSlider;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CFB8A9422B6640D000E617C5 /* MehModel.xcdatamodeld */ = {

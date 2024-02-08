@@ -23,7 +23,7 @@ class CategoryItemCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textAlignment = .left
-        label.font = .pSmall
+        label.font = .pSmall(isBold: true)
         label.text = "music"
         label.textColor = .white
         return label

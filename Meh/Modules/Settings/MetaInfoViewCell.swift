@@ -20,7 +20,7 @@ class MetaInfoViewCell: UICollectionViewCell {
     private var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .pSmall
+        label.font = .pSmall(isBold: true)
         label.textAlignment = .center
         label.textColor = .label
         label.numberOfLines = 0
