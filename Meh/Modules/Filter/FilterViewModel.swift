@@ -20,8 +20,8 @@ final class FilterViewModel: ObservableObject {
 extension FilterViewModel {
     enum FilterSection: Int, CaseIterable {
         case category
-        case price
         case participants
+        case price
         case accessibility
 
         var title: String {

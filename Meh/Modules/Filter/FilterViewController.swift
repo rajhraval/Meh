@@ -83,7 +83,6 @@ final class FilterViewController: UIViewController {
     private func setupCollectionView() {
         filterCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         filterCollectionView.register(CategoryItemCell.self, forCellWithReuseIdentifier: CategoryItemCell.reuseIdentifier)
-        filterCollectionView.register(MehSliderCell.self, forCellWithReuseIdentifier: MehSliderCell.reuseIdentifier)
         filterCollectionView.register(MehHeaderSection.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MehHeaderSection.reuseIdentifier)
         filterCollectionView.delegate = self
         filterCollectionView.dataSource = self
@@ -160,17 +159,12 @@ extension FilterViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let section = viewModel.sections[indexPath.section]
         switch section {
-        case .category:
+        default:
             let item = CategoryItem.items[indexPath.item]
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryItemCell.reuseIdentifier, for: indexPath) as? CategoryItemCell else {
                 fatalError("Cannot dequeue CategoryItemCell")
             }
             cell.configureCell(for: item)
-            return cell
-        default:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MehSliderCell.reuseIdentifier, for: indexPath) as? MehSliderCell else {
-                fatalError("Cannot dequeue CategoryItemCell")
-            }
             return cell
         }
 
