@@ -64,9 +64,5 @@ class MehHeaderSection: UICollectionReusableView {
     func configureHeader(for section: Section) {
         label.text = section.title.uppercased()
     }
-
-    func configureFilterHeader(for section: FilterViewModel.FilterSection) {
-        label.text = section.title.uppercased()
-    }
-
+    
 }

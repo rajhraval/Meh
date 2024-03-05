@@ -232,9 +232,7 @@ extension HomeViewController {
 
     @objc
     private func openFilterBoard() {
-        let vc = FilterViewController()
-        let navigationController = UINavigationController(rootViewController: vc)
-        present(navigationController, animated: true)
+        
     }
 
 }
