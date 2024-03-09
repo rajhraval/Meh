@@ -179,8 +179,7 @@ extension FavoriteViewController: UICollectionViewDataSource {
 
     private func shareImage(for item: MehItem) {
         let vc = ShareViewController(item: item)
-        let navigationController = UINavigationController(rootViewController: vc)
-        present(navigationController, animated: true)
+        present(vc, animated: true)
     }
 
 }

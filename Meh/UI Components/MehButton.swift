@@ -12,6 +12,7 @@ enum MehButtonStyle {
     case symbol
     case label
     case text
+    case navigation
 
     case jumboText
     case jumboSymbol
@@ -96,15 +97,21 @@ final class MehButton: UIButton {
                 configuration.cornerStyle = radius
                 configuration.baseBackgroundColor = backgroundColour
             }
-        case .text, .label:
+        case .text, .label, .navigation:
             configuration = style == .text ? .filled() : .plain()
 
             configuration.baseForegroundColor = foregroundColour
             configuration.title = title
             configuration.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
                 var outgoing = incoming
-                outgoing.font = UIFont(name: self.font.fontName, size: self.font.pointSize)!
+                let size = self.style == .navigation ? UIFont.p.pointSize : self.font.pointSize
+                outgoing.font = UIFont(name: self.font.fontName, size: size)!
                 return outgoing
+            }
+
+            if style == .navigation {
+                configuration.titleAlignment = .trailing
+                configuration.contentInsets.trailing = -1
             }
 
             if style == .text {

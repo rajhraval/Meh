@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF06D2552B984523006980CD /* MehNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF06D2542B984523006980CD /* MehNavigationView.swift */; };
 		CF0EA4112B70B3D600146C2A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */; };
 		CF0EA4152B70E8AF00146C2A /* ShareableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4142B70E8AF00146C2A /* ShareableImage.swift */; };
 		CF0EA4172B71120200146C2A /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EA4162B71120200146C2A /* ShareViewController.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF06D2542B984523006980CD /* MehNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehNavigationView.swift; sourceTree = "<group>"; };
 		CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		CF0EA4142B70E8AF00146C2A /* ShareableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareableImage.swift; sourceTree = "<group>"; };
 		CF0EA4162B71120200146C2A /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				CF204FC32B6AA7340084E90C /* MehCard.swift */,
 				CF2F16902B6E992500214DF5 /* MehTextField.swift */,
 				CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */,
+				CF06D2542B984523006980CD /* MehNavigationView.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				CFB8A9482B6640F900E617C5 /* CoreDataStack.swift in Sources */,
 				CFB8A9442B6640D000E617C5 /* MehModel.xcdatamodeld in Sources */,
 				CF2F168F2B6E6C5700214DF5 /* UIStackView+.swift in Sources */,
+				CF06D2552B984523006980CD /* MehNavigationView.swift in Sources */,
 				CF54C6382B66919000CA8F74 /* Activity.swift in Sources */,
 				CF197AD52B68F61400F4AFE7 /* MehItem+CoreDataProperties.swift in Sources */,
 				CF0EA4112B70B3D600146C2A /* EmptyStateView.swift in Sources */,

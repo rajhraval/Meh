@@ -65,18 +65,15 @@ enum TabItem: String, CaseIterable {
         case .home:
             let vc = HomeViewController()
             vc.tabBarItem = tabBarItem
-            let navigationController = UINavigationController(rootViewController: vc)
-            return navigationController
+            return vc
         case .settings:
             let vc = SettingsViewController()
             vc.tabBarItem = tabBarItem
-            let navigationController = UINavigationController(rootViewController: vc)
-            return navigationController
+            return vc
         case .favorite:
             let vc = FavoriteViewController()
             vc.tabBarItem = tabBarItem
-            let navigationController = UINavigationController(rootViewController: vc)
-            return navigationController
+            return vc
         }
     }
 

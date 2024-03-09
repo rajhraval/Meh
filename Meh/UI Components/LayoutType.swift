@@ -24,7 +24,7 @@ enum LayoutType {
                 let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
                 section.boundarySupplementaryItems = [header]
             }
-            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24)
             let layout = UICollectionViewCompositionalLayout(section: section)
             return layout
         }
