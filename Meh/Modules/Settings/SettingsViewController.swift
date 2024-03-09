@@ -7,44 +7,15 @@
 
 import UIKit
 
-final class SettingsViewController: UIViewController {
+final class SettingsViewController: MehCollectionViewController {
 
-    private var containerStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.spacing = 0
-        stackView.alignment = .fill
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        return stackView
-    }()
+    typealias ViewModel = SettingsViewModel
 
-    private var navigationView: MehNavigationView = {
-        let navigationView = MehNavigationView()
-        navigationView.title = "Settings"
-        navigationView.subtitle = "Change your preferences"
-        navigationView.includesSearchBar = true
-        return navigationView
-    }()
-
-    private var testButton: MehButton = {
-        let button = MehButton(style: .navigation)
-        button.foregroundColour = .black
-        button.title = "Reset"
-        return button
-    }()
-
-    private var settingsCollectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, layout: .singleRowWithHeader(header: true))
-        return collectionView
-    }()
-
-    private var viewModel: SettingsViewModel!
+    private var viewModel: ViewModel!
 
     init(viewModel: SettingsViewModel = SettingsViewModel()) {
-        super.init(nibName: nil, bundle: nil)
+        super.init()
         self.viewModel = viewModel
-        setup()
     }
     
     required init?(coder: NSCoder) {
@@ -53,37 +24,27 @@ final class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
-    private func setup() {
-        title = "Settings"
-        view.backgroundColor = .systemBackground
-        view.addSubview(containerStackView)
-        containerStackView.pinToTopBottomLeadingTrailingEdgesWithConstant()
-        setupNavigationView()
-        setupCollectionView()
+    override func setupView() {
+        super.setupView()
+        navigationView.title = "Settings"
+        navigationView.subtitle = "Change your preferences"
+        layout = .singleRowWithHeader(header: true)
+        setupCollectionViewCells()
     }
 
-    private func setupNavigationView() {
-        containerStackView.addArrangedSubview(navigationView)
-    }
-
-    private func setupCollectionView() {
-        containerStackView.addArrangedSubview(settingsCollectionView)
-        settingsCollectionView.register(MehHeaderSection.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MehHeaderSection.reuseIdentifier)
-        settingsCollectionView.register(SettingsListCell.self, forCellWithReuseIdentifier: SettingsListCell.reuseIdentifier)
-        settingsCollectionView.register(MetaInfoViewCell.self, forCellWithReuseIdentifier: MetaInfoViewCell.reuseIdentifier)
-        settingsCollectionView.delegate = self
-        settingsCollectionView.dataSource = self
+    private func setupCollectionViewCells() {
+        collectionView.registerSupplementaryView([MehHeaderSection.self], ofKind: UICollectionView.elementKindSectionHeader)
+        collectionView.registerCells([SettingsListCell.self, MetaInfoViewCell.self])
     }
 
 }
 
-extension SettingsViewController: UICollectionViewDataSource {
+extension SettingsViewController {
 
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return viewModel.sections.count
     }
 
@@ -99,7 +60,7 @@ extension SettingsViewController: UICollectionViewDataSource {
         }
     }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let section = viewModel.sections[section]
         switch section {
         case .about:
@@ -109,7 +70,7 @@ extension SettingsViewController: UICollectionViewDataSource {
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let section = viewModel.sections[indexPath.section]
         switch section {
         case .about:
@@ -125,10 +86,10 @@ extension SettingsViewController: UICollectionViewDataSource {
 
 }
 
-extension SettingsViewController: UICollectionViewDelegate {
+extension SettingsViewController {
 
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let section = viewModel.sections[indexPath.section]
         switch section {
         case .about:

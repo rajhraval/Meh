@@ -66,6 +66,7 @@
 		CFB8A94E2B6643AF00E617C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8A94D2B6643AF00E617C5 /* Logger.swift */; };
 		CFD409FE2B6F9AD900BC1A21 /* NSSortDescriptor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */; };
 		CFD40A002B6F9C2B00BC1A21 /* NSPredicate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */; };
+		CFD9A2682B9C375800C28F16 /* MehCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9A2672B9C375800C28F16 /* MehCollectionViewController.swift */; };
 		CFDB8F1E2B7134CD007C5F98 /* MehHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB8F1D2B7134CD007C5F98 /* MehHeaderSection.swift */; };
 		CFDB8F202B713A75007C5F98 /* AboutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB8F1F2B713A75007C5F98 /* AboutItem.swift */; };
 /* End PBXBuildFile section */
@@ -133,6 +134,7 @@
 		CFB8A94D2B6643AF00E617C5 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CFD409FD2B6F9AD900BC1A21 /* NSSortDescriptor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSortDescriptor+.swift"; sourceTree = "<group>"; };
 		CFD409FF2B6F9C2B00BC1A21 /* NSPredicate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+.swift"; sourceTree = "<group>"; };
+		CFD9A2672B9C375800C28F16 /* MehCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehCollectionViewController.swift; sourceTree = "<group>"; };
 		CFDB8F1D2B7134CD007C5F98 /* MehHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehHeaderSection.swift; sourceTree = "<group>"; };
 		CFDB8F1F2B713A75007C5F98 /* AboutItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +187,7 @@
 				CF2F16902B6E992500214DF5 /* MehTextField.swift */,
 				CF0EA4102B70B3D600146C2A /* EmptyStateView.swift */,
 				CF06D2542B984523006980CD /* MehNavigationView.swift */,
+				CFD9A2672B9C375800C28F16 /* MehCollectionViewController.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				CF236FBE2B73E6400082FA2E /* UIWindow+.swift in Sources */,
 				CFB8A8E52B66238000E617C5 /* HomeViewController.swift in Sources */,
 				CF204FBB2B6A75F70084E90C /* FontHelper.swift in Sources */,
+				CFD9A2682B9C375800C28F16 /* MehCollectionViewController.swift in Sources */,
 				CFB8A94B2B66420F00E617C5 /* URL+.swift in Sources */,
 				CF197AEB2B690B6D00F4AFE7 /* UICollectionView+.swift in Sources */,
 				CF0EA41A2B711D4F00146C2A /* SettingsListCell.swift in Sources */,
