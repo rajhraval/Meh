@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Section: String, CaseIterable {
+enum SettingsSection: String, CaseIterable, HeaderSection {
     case about
     case meta
 
@@ -23,6 +23,6 @@ enum Section: String, CaseIterable {
 
 final class SettingsViewModel: ObservableObject {
 
-    @Published var sections: [Section] = Section.allCases
+    @Published var sections: [SettingsSection] = SettingsSection.allCases
 
 }

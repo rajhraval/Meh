@@ -232,6 +232,8 @@ final class MehNavigationView: UIView {
         setupLabels()
         setupActionButtons()
         setupSearchField()
+        leftBarButton?.addTarget(self, action: #selector(leftBarButtonTapped), for: .touchUpInside)
+        rightBarButton?.addTarget(self, action: #selector(rightBarButtonTapped), for: .touchUpInside)
     }
 
     private func setupLabels() {
@@ -257,11 +259,13 @@ final class MehNavigationView: UIView {
     private func setupSortButton() {
         sortButton.translatesAutoresizingMaskIntoConstraints = false
         sortButton.setWidthHeightConstraints(48)
+        sortButton.addTarget(self, action: #selector(sortTapped), for: .touchUpInside)
     }
 
     private func setupFilterButton() {
         filterButton.translatesAutoresizingMaskIntoConstraints = false
         filterButton.setWidthHeightConstraints(48)
+        filterButton.addTarget(self, action: #selector(filterTapped), for: .touchUpInside)
     }
 
     private func setupSearchField() {

@@ -42,14 +42,14 @@ class MehCollectionViewController: UIViewController, ViewModelInclusion {
         return view
     }()
 
-    open var layout: LayoutType {
+    open var layout: UICollectionViewCompositionalLayout {
         didSet {
             collectionView.collectionViewLayout.invalidateLayout()
-            collectionView.setCollectionViewLayout(layout.layout, animated: true)
+            collectionView.setCollectionViewLayout(layout, animated: true)
         }
     }
 
-    public init(with layout: LayoutType = .singleRowWithHeader(header: false)) {
+    public init(with layout: UICollectionViewCompositionalLayout = LayoutType.singleRowWithHeader(header: false).layout) {
         self.layout = layout
         super.init(nibName: nil, bundle: nil)
         setup()

@@ -13,6 +13,7 @@ enum MehButtonStyle {
     case label
     case text
     case navigation
+    case chip
 
     case jumboText
     case jumboSymbol
@@ -62,9 +63,23 @@ final class MehButton: UIButton {
         }
     }
 
+    var chipColor: UIColor = .systemBlue {
+        didSet {
+            setupButton()
+        }
+    }
+
     var font: UIFont = .h3 {
         didSet {
             setupButton()
+        }
+    }
+
+    override var isSelected: Bool {
+        didSet {
+            if style == .chip {
+                setupButton()
+            }
         }
     }
 
@@ -134,9 +149,22 @@ final class MehButton: UIButton {
                 configuration.image = image.applyingSymbolConfiguration(fontConfig)
             }
             configuration.baseForegroundColor = foregroundColour
-            configuration.baseBackgroundColor = style == .jumboSymbol ? backgroundColour : backgroundColour.withAlphaComponent(0.1)
+            configuration.baseBackgroundColor = style == .jumboSymbol ? backgroundColour : backgroundColour.withAlphaComponent(0.15)
             configuration.cornerStyle = .capsule
             configuration.buttonSize = .large
+        case .chip:
+            configuration = isSelected ? .filled() : .tinted()
+            configuration.cornerStyle = .capsule
+            configuration.baseBackgroundColor = chipColor
+            configuration.buttonSize = .medium
+            configuration.baseForegroundColor = isSelected ? .white : chipColor
+            configuration.title = title
+            configuration.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+                var outgoing = incoming
+                let font = UIFont.p
+                outgoing.font = UIFont(name: font.fontName, size: font.pointSize)!
+                return outgoing
+            }
         }
         self.configuration = configuration
     }

@@ -248,7 +248,8 @@ extension HomeViewController {
 
     @objc
     private func openFilterBoard() {
-        
+        let vc = FilterViewController()
+        present(vc, animated: true)
     }
 
 }

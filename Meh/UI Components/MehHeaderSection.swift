@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HeaderSection {
+    var title: String { get }
+}
+
 class MehHeaderSection: UICollectionReusableView {
 
     static let reuseIdentifier = "MehHeaderSection"
@@ -61,8 +65,8 @@ class MehHeaderSection: UICollectionReusableView {
         label.pinToTopBottomLeadingTrailingEdgesWithConstants(verticalConstant: 8)
     }
 
-    func configureHeader(for section: Section) {
-        label.text = section.title.uppercased()
+    func configureHeader(for section: HeaderSection) {
+        label.text = section.title
     }
     
 }

@@ -31,7 +31,7 @@ final class SettingsViewController: MehCollectionViewController {
         super.setupView()
         navigationView.title = "Settings"
         navigationView.subtitle = "Change your preferences"
-        layout = .singleRowWithHeader(header: true)
+        layout = LayoutType.singleRowWithHeader(header: true).layout
         setupCollectionViewCells()
     }
 
