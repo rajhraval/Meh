@@ -30,7 +30,7 @@ final class MehCard: UIView {
     private var promptLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .h1
+        label.font = .h2
         label.textColor = .white.withAlphaComponent(0.6)
         label.minimumScaleFactor = 0.7
         label.adjustsFontSizeToFitWidth = true

@@ -10,6 +10,14 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
+    private var navigationView: MehNavigationView = {
+        let navigationView = MehNavigationView()
+        navigationView.translatesAutoresizingMaskIntoConstraints = false
+        navigationView.title = "Feeling Bored?"
+        navigationView.subtitle = "Here's what you can do"
+        return navigationView
+    }()
+
     private var mehCard: MehCard =  {
         let mehCard = MehCard()
         mehCard.translatesAutoresizingMaskIntoConstraints = false
@@ -113,6 +121,7 @@ final class HomeViewController: UIViewController {
 
     private func setupView() {
         setupLoaderConstraints()
+        setupNavigationView()
         setupMehCardConstraints()
         setupBarButtons()
     }
@@ -123,13 +132,20 @@ final class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = filterButton
     }
 
+    private func setupNavigationView() {
+        navigationView.rightBarButton = filterButton
+        view.addSubview(navigationView)
+        navigationView.pinToLeadingAndTrailingEdgesWithConstant()
+        navigationView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+    }
+
     private func setupMehCardConstraints() {
         mehCard.isHidden = true
         mehCard.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mehCard)
         setupStackViewConstraints()
         mehCard.pinToLeadingAndTrailingEdgesWithConstant(16)
-        mehCard.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18).isActive = true
+        mehCard.topAnchor.constraint(equalTo: navigationView.bottomAnchor).isActive = true
         mehCard.bottomAnchor.constraint(equalTo: buttonStackView.topAnchor, constant: -22).isActive = true
     }
 

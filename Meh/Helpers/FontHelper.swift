@@ -30,7 +30,7 @@ enum FontWeight: String {
 }
 
 enum FontSize: CGFloat {
-    case h0 = 56
+    case h0 = 48
     case h1 = 36
     case h2 = 34
     case h3 = 22

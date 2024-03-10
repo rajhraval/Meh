@@ -18,34 +18,33 @@ protocol ViewModelInclusion: AnyObject {
 class MehCollectionViewController: UIViewController, ViewModelInclusion {
     typealias ViewModel = ViewModelType
 
-    private var containerStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.spacing = 0
-        stackView.alignment = .fill
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        return stackView
-    }()
-
-    var navigationView: MehNavigationView = {
+    open var navigationView: MehNavigationView = {
         let navigationView = MehNavigationView()
+        navigationView.translatesAutoresizingMaskIntoConstraints = false
         return navigationView
     }()
 
-    var collectionView: UICollectionView = {
+    open var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, layout: .singleRowWithHeader(header: false))
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
 
-    var loader: UIActivityIndicatorView = {
+    open var loader: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .medium)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         return activityIndicator
     }()
 
-    var layout: LayoutType {
+    open var emptyStateView: EmptyStateView = {
+        let view = EmptyStateView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    open var layout: LayoutType {
         didSet {
+            collectionView.collectionViewLayout.invalidateLayout()
             collectionView.setCollectionViewLayout(layout.layout, animated: true)
         }
     }
@@ -60,26 +59,34 @@ class MehCollectionViewController: UIViewController, ViewModelInclusion {
         fatalError("init(coder:) has not been implemented")
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
     func setup() {
         setupView()
     }
 
     func setupView() {
         view.backgroundColor = .systemBackground
-        view.addSubview(containerStackView)
-        containerStackView.pinToTopBottomLeadingTrailingEdgesWithConstant()
         setupNavigationView()
         setupCollectionView()
         setupActivityIndicator()
+        setupEmptyStateView()
         collectionView.registerCells([UICollectionViewCell.self])
     }
 
     private func setupNavigationView() {
-        containerStackView.addArrangedSubview(navigationView)
+        view.addSubview(navigationView)
+        navigationView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        navigationView.pinToLeadingAndTrailingEdgesWithConstant()
     }
 
     private func setupCollectionView() {
-        containerStackView.addArrangedSubview(collectionView)
+        view.addSubview(collectionView)
+        collectionView.topAnchor.constraint(equalTo: navigationView.bottomAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        collectionView.pinToLeadingAndTrailingEdgesWithConstant()
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -89,20 +96,25 @@ class MehCollectionViewController: UIViewController, ViewModelInclusion {
         loader.centerInSuperview()
     }
 
+    private func setupEmptyStateView() {
+        emptyStateView.isHidden = true
+        view.addSubview(emptyStateView)
+        emptyStateView.centerInSuperview()
+    }
+
 }
 
 extension MehCollectionViewController: UICollectionViewDataSource {
 
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 0
+    open func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
     }
     
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
         return cell
     }
@@ -111,7 +123,7 @@ extension MehCollectionViewController: UICollectionViewDataSource {
 
 extension MehCollectionViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
     }
 

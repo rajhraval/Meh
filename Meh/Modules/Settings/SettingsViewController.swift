@@ -79,7 +79,7 @@ extension SettingsViewController {
             cell.configureCell(with: item)
             return cell
         case .meta:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MetaInfoViewCell.reuseIdentifier, for: indexPath) as? MetaInfoViewCell else { fatalError("Cannot dequeue FavoriteListCell") }
+            let cell: MetaInfoViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
             return cell
         }
     }
