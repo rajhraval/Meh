@@ -9,6 +9,14 @@ import UIKit
 
 class ShareViewController: UIViewController {
 
+    private var navigationView: MehNavigationView = {
+        let navigationView = MehNavigationView()
+        navigationView.translatesAutoresizingMaskIntoConstraints = false
+        navigationView.title = "Share"
+        navigationView.subtitle = "With the ones you want"
+        return navigationView
+    }()
+
     private var mehCard: MehCard = {
         let mehCard = MehCard()
         mehCard.translatesAutoresizingMaskIntoConstraints = false
@@ -68,18 +76,26 @@ class ShareViewController: UIViewController {
     private func setup() {
         title = "Share"
         view.backgroundColor = .systemBackground
+        getValues()
         setupStackViewConstraints()
         setupNavigationItemButton()
     }
 
-    private func setupStackViewConstraints() {
+    private func getValues() {
         mehCard.activity = Activity(from: item)
         let color = UIColor(hex: item.color)
         mehCard.cardColor = color
         dismissButton.foregroundColour = color
+    }
+
+    private func setupStackViewConstraints() {
+        view.addSubview(navigationView)
+        navigationView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        navigationView.pinToLeadingAndTrailingEdgesWithConstant()
+        
         view.addSubview(mehCard)
         view.addSubview(buttonStackView)
-        mehCard.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        mehCard.topAnchor.constraint(equalTo: navigationView.bottomAnchor).isActive = true
         mehCard.bottomAnchor.constraint(greaterThanOrEqualTo: buttonStackView.topAnchor, constant: -20).isActive = true
         mehCard.pinToLeadingAndTrailingEdgesWithConstant(20)
         buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24).isActive = true
